@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ALEXISFLIX · Alexis Druaux, Chef de projet</title>
+<meta name="description" content="Le CV d'Alexis Druaux, chef de projet IT & transformation digitale, en version série. 4 saisons, 2 spin-offs, 1 épisode interactif. Disponible immédiatement à Rouen, Mont-Saint-Aignan et Paris.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ALEXISFLIX · Chef de projet, la série">
+<meta property="og:description" content="4 saisons, 2 spin-offs, 1 épisode interactif où c'est vous qui recrutez. Déconseillé aux ATS.">
+<meta property="og:image" content="https://doctorsnake76.github.io/alexisflix/og.jpg">
+<meta property="og:url" content="https://doctorsnake76.github.io/alexisflix/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23141414'/%3E%3Ctext x='32' y='50' font-family='Impact,sans-serif' font-size='52' text-anchor='middle' fill='%23e50914'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141414; --bg2:#181818; --bg3:#232323; --red:#e50914; --red2:#b20710;
+  --txt:#fff; --mute:#b3b3b3; --dim:#808080; --green:#46d369; --line:#404040;
+  --pad:clamp(16px,4vw,60px);
+  --sans:'Inter',Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.hidden{display:none!important}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- INTRO ---------- */
+#intro{position:fixed;inset:0;z-index:200;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#intro .logoA{font-family:'Bebas Neue',Impact,sans-serif;font-size:min(46vh,60vw);line-height:.8;color:var(--red);position:relative;
+  text-shadow:0 0 40px rgba(229,9,20,.35);transform:scale(.8);opacity:0;will-change:transform,opacity}
+#intro.play .logoA{animation:aIn 2.7s cubic-bezier(.33,0,.2,1) forwards}
+#intro .ribbons{position:absolute;inset:0;display:flex;justify-content:center;gap:2px;opacity:0;pointer-events:none}
+#intro .ribbons i{display:block;width:1.4vw;height:100%;transform:scaleY(0);transform-origin:top}
+#intro .ribbons i{will-change:transform}
+#intro.play .ribbons{animation:rib 1.9s cubic-bezier(.4,0,.2,1) 1.25s forwards}
+#intro.play .ribbons i{animation:ribI 1.1s cubic-bezier(.6,0,.2,1) 1.25s forwards}
+@keyframes aIn{0%{opacity:0;transform:scale(.82)}7%{opacity:1;transform:scale(1)}12%{transform:scale(1.07)}19%{transform:scale(1)}50%{opacity:1;transform:scale(1.1)}100%{opacity:0;transform:scale(6.5)}}
+@keyframes rib{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+@keyframes ribI{to{transform:scaleY(1)}}
+#intro .skip{position:absolute;right:24px;bottom:28px;border:1px solid rgba(255,255,255,.5);padding:10px 18px;font-size:14px;font-weight:600;background:rgba(0,0,0,.4);border-radius:4px}
+#intro .tap{position:absolute;bottom:20%;left:0;right:0;text-align:center;color:var(--mute);font-size:14px;letter-spacing:.08em}
+
+/* ---------- PROFILS ---------- */
+#profiles{position:fixed;inset:0;z-index:150;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;overflow:auto}
+#profiles .brand{position:absolute;top:22px;left:var(--pad)}
+#profiles h1{font-size:clamp(30px,5vw,56px);font-weight:500;margin-bottom:8px;text-align:center}
+#profiles .sub{color:var(--dim);font-size:clamp(13px,1.4vw,16px);margin-bottom:clamp(24px,4vw,44px);text-align:center;max-width:560px}
+.plist{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,2.4vw,32px);max-width:900px}
+.prof{display:flex;flex-direction:column;align-items:center;width:clamp(96px,12vw,160px);color:var(--dim);transition:color .2s}
+.prof .av{width:100%;aspect-ratio:1;border-radius:6px;overflow:hidden;outline:3px solid transparent;outline-offset:0;transition:outline-color .15s,transform .2s}
+.prof:hover,.prof:focus-visible{color:#fff}
+.prof:hover .av,.prof:focus-visible .av{outline-color:#fff}
+.prof b{margin-top:12px;font-weight:500;font-size:clamp(13px,1.4vw,19px);text-align:center}
+.prof small{font-size:11px;margin-top:4px;text-align:center;color:#666;min-height:2.6em}
+.prof .kid{font-size:10px;background:var(--red);color:#fff;padding:1px 6px;border-radius:2px;margin-top:4px;font-weight:700}
+.manage{margin-top:clamp(28px,5vw,60px);border:1px solid var(--dim);color:var(--dim);padding:8px 22px;letter-spacing:.15em;font-size:13px;text-transform:uppercase}
+.manage:hover{color:#fff;border-color:#fff}
+
+/* ---------- HEADER ---------- */
+.brand{font-family:'Bebas Neue',Impact,sans-serif;color:var(--red);font-size:clamp(28px,3.2vw,40px);letter-spacing:.02em;line-height:1;display:inline-block;transform:scaleY(1.08)}
+header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;gap:clamp(14px,3vw,44px);padding:14px var(--pad);
+  background:linear-gradient(180deg,rgba(0,0,0,.75) 10%,transparent);transition:background .4s}
+header.solid{background:var(--bg)}
+header nav{display:flex;gap:20px;font-size:14px;color:#e5e5e5}
+header nav a{transition:color .3s;white-space:nowrap}
+header nav a:hover{color:var(--mute)}
+header nav a.on{font-weight:700;color:#fff}
+header .right{margin-left:auto;display:flex;align-items:center;gap:clamp(12px,1.6vw,22px)}
+.ico{width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center}
+.ico svg{width:22px;height:22px}
+.search{display:flex;align-items:center;gap:8px;border:1px solid transparent;padding:4px 6px;transition:all .3s}
+.search.open{border-color:#fff;background:rgba(0,0,0,.75)}
+.search input{width:0;background:transparent;border:0;color:#fff;font:inherit;font-size:14px;outline:0;transition:width .3s}
+.search.open input{width:min(220px,42vw)}
+.bell{position:relative}
+.bell .dot{position:absolute;top:-4px;right:-6px;background:var(--red);font-size:10px;font-weight:700;border-radius:8px;padding:0 5px;line-height:15px}
+.me{display:flex;align-items:center;gap:6px}
+.me .mini{width:32px;height:32px;border-radius:4px;overflow:hidden}
+.drop{position:absolute;top:58px;right:var(--pad);width:min(380px,92vw);background:rgba(0,0,0,.94);border:1px solid #333;border-top:2px solid #e5e5e5;font-size:13px;z-index:70}
+.drop .n{display:flex;gap:12px;padding:14px;border-bottom:1px solid #2a2a2a;align-items:flex-start}
+.drop .n .th{width:96px;flex:none;aspect-ratio:16/9;border-radius:3px;overflow:hidden;position:relative}
+.drop .n p{color:#ccc;line-height:1.4}
+.drop .n small{display:block;color:#777;margin-top:4px}
+.drop .menu a,.drop .menu button{display:flex;gap:10px;padding:10px 16px;width:100%;text-align:left;align-items:center}
+.drop .menu a:hover,.drop .menu button:hover{text-decoration:underline}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:min(56.25vw,100vh);min-height:560px;overflow:hidden}
+.hero .bgart{position:absolute;inset:0;animation:kb 40s ease-in-out infinite alternate;will-change:transform;backface-visibility:hidden}
+.hero .bgart svg{width:100%;height:100%}
+.hero .bgart img{width:100%;height:100%;object-fit:cover;object-position:70% 20%}
+@keyframes kb{from{transform:translate3d(0,0,0) scale(1.02)}to{transform:translate3d(-1.5%,-1%,0) scale(1.12)}}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(77deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 45%,transparent 70%),linear-gradient(0deg,var(--bg) 0%,rgba(20,20,20,.4) 18%,transparent 34%)}
+.hero .info{position:absolute;left:var(--pad);bottom:clamp(110px,16vw,240px);width:min(40%,620px);z-index:3}
+.hero .series{display:flex;align-items:center;gap:8px;font-size:clamp(11px,1vw,15px);letter-spacing:.32em;font-weight:700;color:#ddd;margin-bottom:10px}
+.hero .series .A{font-family:'Bebas Neue';color:var(--red);font-size:2.2em;letter-spacing:0;line-height:.7}
+.titleart{font-family:'Anton',Impact,sans-serif;font-size:clamp(46px,7.4vw,124px);line-height:.86;text-transform:uppercase;letter-spacing:-.01em;
+  background:linear-gradient(180deg,#fff 30%,#c9c9c9 70%,#8f8f8f);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 20px rgba(0,0,0,.6))}
+.titleart em{font-style:normal;display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:.33em;letter-spacing:.02em;text-transform:none;margin:6px 0 4px;color:#fff;-webkit-text-fill-color:#fff}
+.top10badge{display:flex;align-items:center;gap:10px;margin:16px 0 10px;font-weight:700;font-size:clamp(14px,1.5vw,22px)}
+.t10{width:clamp(26px,2.4vw,34px);aspect-ratio:1;background:var(--red);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;font-weight:800}
+.t10 small{font-size:.32em;letter-spacing:.05em}
+.t10 span{font-size:.62em}
+.hero .tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(15px,1.5vw,22px);color:#f1f1f1;margin:0 0 10px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.hero p.syn{font-size:clamp(13px,1.25vw,19px);line-height:1.38;text-shadow:2px 2px 4px rgba(0,0,0,.45);color:#fff}
+.btns{display:flex;gap:10px;margin-top:clamp(14px,1.6vw,24px);flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:4px;padding:clamp(8px,.8vw,11px) clamp(18px,2vw,30px);font-size:clamp(14px,1.3vw,19px);font-weight:700;transition:background .2s}
+.btn svg{width:1.4em;height:1.4em}
+.btn.w{background:#fff;color:#000}.btn.w:hover{background:rgba(255,255,255,.75)}
+.btn.g{background:rgba(109,109,110,.7);color:#fff}.btn.g:hover{background:rgba(109,109,110,.45)}
+.hero .side{position:absolute;right:0;bottom:clamp(140px,20vw,290px);display:flex;align-items:center;gap:12px;z-index:3}
+.roundbtn{width:clamp(34px,3vw,44px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25)}
+.roundbtn svg{width:55%;height:55%}
+.rating{background:rgba(51,51,51,.6);border-left:3px solid #dcdcdc;padding:6px 40px 6px 12px;font-size:clamp(12px,1.1vw,17px);display:flex;align-items:center;gap:10px}
+.rating b{border:1px solid #fff;padding:0 4px;font-size:.85em}
+.rating span{color:#ddd;font-size:.78em}
+.mobposter{display:none}
+
+/* ---------- ROWS ---------- */
+main{position:relative;z-index:5;margin-top:clamp(-170px,-9vw,-60px);padding-bottom:40px}
+.row{margin:0 0 clamp(26px,3vw,44px);position:relative}
+.row h2{font-size:clamp(15px,1.45vw,22px);font-weight:700;color:#e5e5e5;padding:0 var(--pad);margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
+.row h2 .exp{font-size:.65em;color:#54b9c5;font-weight:600;opacity:0;transform:translateX(-10px);transition:all .4s}
+.row:hover h2 .exp{opacity:1;transform:none}
+.track{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--pad) 14px;scroll-padding:0 var(--pad);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 clamp(150px,calc((100vw - 2*var(--pad) - 4*6px)/4.6),420px);aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;scroll-snap-align:start;background:#222;cursor:pointer;transition:opacity .2s;contain:paint}
+.card:focus-visible{outline:2px solid #fff}
+.card .prog{position:absolute;left:8%;right:8%;bottom:8px;height:3px;background:rgba(120,120,120,.8);z-index:3}
+.card .prog i{display:block;height:100%;background:var(--red)}
+.card.cw{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.arrow{position:absolute;top:34px;bottom:14px;width:calc(var(--pad) - 6px);z-index:8;background:rgba(20,20,20,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.arrow svg{width:60%;max-width:34px;transition:transform .15s}
+.arrow:hover svg{transform:scale(1.25)}
+.row:hover .arrow{opacity:1}
+.arrow.l{left:0}.arrow.r{right:0}
+.pips{position:absolute;right:var(--pad);top:8px;display:flex;gap:2px;opacity:0;transition:opacity .2s}
+.row:hover .pips{opacity:1}
+.pips i{width:12px;height:2px;background:#4d4d4d}.pips i.on{background:#aaa}
+
+/* Top 10 */
+.t10card{flex:0 0 clamp(190px,calc((100vw - 2*var(--pad))/5.2),400px);display:flex;align-items:stretch;scroll-snap-align:start;cursor:pointer;position:relative}
+.t10card .num{font-family:'Anton',Impact,sans-serif;font-size:clamp(120px,13vw,250px);line-height:.78;color:var(--bg);-webkit-text-stroke:4px #595959;letter-spacing:-.06em;flex:0 0 46%;display:flex;align-items:flex-end;justify-content:flex-end;margin-right:-6%;position:relative;z-index:0}
+.t10card .pst{flex:0 0 54%;aspect-ratio:2/3;border-radius:4px;overflow:hidden;position:relative;z-index:1}
+
+/* ---------- POSTERS ---------- */
+.poster{position:absolute;inset:0;overflow:hidden;isolation:isolate}
+.poster svg.art{position:absolute;inset:0;width:100%;height:100%}
+.poster .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 40%,rgba(0,0,0,.65));z-index:1}
+.poster .tt{position:absolute;z-index:2;left:7%;right:7%;bottom:10%;line-height:.92;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.poster .A{position:absolute;top:6%;left:5%;font-family:'Bebas Neue';color:var(--red);font-size:clamp(16px,1.6vw,26px);line-height:1;z-index:3;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+.poster .ribbon{position:absolute;z-index:3;bottom:0;left:50%;transform:translateX(-50%);background:var(--red);font-size:clamp(8px,.65vw,11px);font-weight:700;padding:3px 7px;border-radius:2px 2px 0 0;white-space:nowrap;letter-spacing:.02em}
+.poster .t10s{position:absolute;top:0;right:5%;z-index:3;background:var(--red);font-weight:800;line-height:1;padding:3px 3px 4px;font-size:clamp(9px,.8vw,12px);text-align:center;border-radius:0 0 2px 2px}
+.poster .t10s small{display:block;font-size:.55em}
+.poster img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.port .tt{bottom:14%;text-align:center;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.poster.rib .tt{bottom:20%}
+
+/* ---------- HOVER PREVIEW ---------- */
+#preview{position:absolute;z-index:90;width:0;background:var(--bg2);border-radius:6px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.75);opacity:0;transform:scale(.667);transition:transform .32s cubic-bezier(.2,.8,.2,1),opacity .2s ease;pointer-events:none;will-change:transform,opacity}
+#preview.show{opacity:1;transform:scale(1);pointer-events:auto}
+#preview .pi{opacity:0;transition:opacity .2s ease .12s}
+#preview.show .pi{opacity:1}
+#preview .pv{aspect-ratio:16/9;position:relative}
+#preview .pi{padding:14px 16px 18px}
+#preview .act{display:flex;gap:8px;align-items:center}
+#preview .act .roundbtn{width:38px;border-width:2px;border-color:rgba(255,255,255,.5);background:#2a2a2a}
+#preview .act .roundbtn:hover{border-color:#fff}
+#preview .act .play{background:#fff;border-color:#fff}
+#preview .act .play svg{fill:#000}
+#preview .act .more{margin-left:auto}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px;font-size:14px;color:#bcbcbc}
+.meta .match{color:var(--green);font-weight:700}
+.meta .age{border:1px solid rgba(255,255,255,.4);padding:0 5px;font-size:12px}
+.meta .hd{border:1px solid rgba(255,255,255,.4);border-radius:3px;padding:0 4px;font-size:10px;font-weight:700}
+.genres{display:flex;flex-wrap:wrap;gap:4px 0;margin-top:10px;font-size:13px;color:#fff}
+.genres span+span::before{content:"•";color:#646464;margin:0 6px}
+
+/* ---------- MODAL ---------- */
+#modal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.7);overflow-y:auto;display:flex;justify-content:center;padding:clamp(0px,4vh,40px) 0;opacity:0;transition:opacity .28s ease;overscroll-behavior:contain}
+#modal.show{opacity:1}
+#modal .box{width:min(880px,100%);background:var(--bg2);border-radius:8px;overflow:hidden;align-self:flex-start;box-shadow:0 10px 40px rgba(0,0,0,.8);transform:translate3d(0,24px,0) scale(.96);transition:transform .38s cubic-bezier(.2,.8,.2,1);will-change:transform}
+#modal.show .box{transform:none}
+#modal .mh{position:relative;aspect-ratio:16/9}
+#modal .mh .fade{position:absolute;inset:0;background:linear-gradient(0deg,var(--bg2) 0%,transparent 45%);z-index:4}
+#modal .mh .over{position:absolute;left:clamp(16px,5%,48px);right:clamp(16px,5%,48px);bottom:clamp(14px,6%,48px);z-index:5}
+#modal .mh .over .mtitle{margin-bottom:clamp(10px,2vw,22px)}
+#modal .close{position:absolute;top:14px;right:14px;z-index:6;width:38px;height:38px;border-radius:50%;background:#181818;display:flex;align-items:center;justify-content:center}
+#modal .close svg{width:20px}
+#modal .mb{padding:0 clamp(16px,5%,48px) 40px}
+.mgrid{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+.mgrid .l p{font-size:15px;line-height:1.5;margin-top:12px}
+.mgrid .r{font-size:14px;color:#777;line-height:1.5}
+.mgrid .r div{margin-bottom:10px}
+.mgrid .r b{color:#fff;font-weight:400}
+.eph{display:flex;justify-content:space-between;align-items:center;margin:38px 0 14px}
+.eph h3{font-size:22px}
+select.season{background:#242424;color:#fff;border:1px solid #4d4d4d;border-radius:4px;padding:10px 14px;font:inherit;font-weight:700;font-size:15px}
+.ep{display:flex;align-items:center;gap:clamp(10px,2vw,20px);padding:clamp(14px,2vw,24px) clamp(8px,2vw,24px);border-bottom:1px solid #404040;border-radius:4px;cursor:default}
+.ep:first-child{background:#333}
+.ep .no{font-size:24px;color:#d2d2d2;width:22px;flex:none;text-align:center}
+.ep .th{width:clamp(96px,17%,150px);flex:none;aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative}
+.ep .bd{flex:1;min-width:0}
+.ep .bd .top{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:16px;margin-bottom:6px}
+.ep .bd .top span{font-weight:400;flex:none;font-size:15px}
+.ep .bd p{color:#d2d2d2;font-size:14px;line-height:1.45}
+.ep .bd .kpi{display:inline-block;margin-top:8px;font-size:12px;color:var(--green);font-weight:700}
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.mcard{background:#2f2f2f;border-radius:4px;overflow:hidden;cursor:pointer}
+.mcard .pv{aspect-ratio:16/9;position:relative}
+.mcard .ci{padding:12px;font-size:13px;color:#d2d2d2;line-height:1.4}
+.mcard .ci .meta{margin-top:0;margin-bottom:8px;font-size:13px}
+.about{margin-top:40px;font-size:14px;color:#777;line-height:1.6}
+.about h3{color:#fff;font-weight:400;font-size:22px;margin-bottom:12px}
+.about b{color:#ddd;font-weight:400}
+
+/* ---------- PLAYER ---------- */
+#player{position:fixed;inset:0;z-index:180;background:#000;overflow:hidden;cursor:none}
+#player.ui{cursor:default}
+#player .stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 8vw}
+#player .bars::before,#player .bars::after{content:"";position:absolute;left:0;right:0;height:9vh;background:#000;z-index:5}
+#player .bars::before{top:0}#player .bars::after{bottom:0}
+#player .bgfx{position:absolute;inset:0;opacity:.3}
+#player .bgfx .poster{will-change:transform;backface-visibility:hidden}
+#player .card-t{position:relative;z-index:4;max-width:1100px}
+#player .card-t .big{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(26px,4.4vw,64px);line-height:1.12}
+#player .card-t .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(26px,4.2vw,60px);color:#f3f3f3}
+#player .card-t .small{letter-spacing:.5em;font-size:clamp(11px,1.2vw,15px);color:#bbb;font-weight:700}
+#player .card-t .who{font-size:clamp(12px,1.2vw,16px);color:#999;margin-top:18px;letter-spacing:.1em}
+#player .card-t.anim{animation:tin 3.1s ease both}
+#player .card-t{will-change:transform,opacity}
+@keyframes tin{0%{opacity:0;transform:translate3d(0,8px,0) scale(1.03)}16%{opacity:1;transform:translate3d(0,0,0) scale(1.01)}82%{opacity:1}100%{opacity:0;transform:scale(.985)}}
+#player .card-t.hold{animation:tin2 1.4s ease both}
+@keyframes tin2{0%{opacity:0;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+#player .sub{position:absolute;left:0;right:0;bottom:14vh;text-align:center;z-index:6;font-size:clamp(14px,1.8vw,24px);text-shadow:0 0 6px #000,0 2px 2px #000;padding:0 8vw}
+.pui{position:absolute;inset:0;z-index:10;opacity:0;transition:opacity .3s;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.6),transparent 18%,transparent 75%,rgba(0,0,0,.75))}
+#player.ui .pui{opacity:1;pointer-events:auto}
+.pui .back{position:absolute;top:22px;left:22px;width:44px;height:44px}
+.pui .back svg{width:100%}
+.pui .bottom{position:absolute;left:0;right:0;bottom:0;padding:0 clamp(14px,2vw,28px) clamp(14px,2vw,24px)}
+.pbar{display:flex;align-items:center;gap:14px}
+.pbar .bar{flex:1;height:5px;background:rgba(255,255,255,.3);position:relative;cursor:pointer}
+.pbar .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--red)}
+.pbar .bar b{position:absolute;top:50%;width:15px;height:15px;border-radius:50%;background:var(--red);transform:translate(-50%,-50%)}
+.pbar .time{font-size:14px;min-width:40px}
+.pctl{display:flex;align-items:center;gap:clamp(14px,2.4vw,34px);margin-top:12px}
+.pctl button svg{width:clamp(26px,2.6vw,38px);height:clamp(26px,2.6vw,38px)}
+.pctl .ptitle{flex:1;text-align:center;font-size:clamp(13px,1.3vw,18px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pctl .ptitle b{margin-right:8px}
+.skipintro{position:absolute;right:clamp(14px,3vw,48px);bottom:clamp(90px,14vh,150px);z-index:11;border:1px solid rgba(255,255,255,.6);background:rgba(42,42,42,.6);padding:12px 26px;font-weight:700;font-size:15px;border-radius:4px}
+.skipintro:hover{background:#fff;color:#000}
+
+/* ---------- INTERACTIF ---------- */
+#bander{position:fixed;inset:0;z-index:185;background:#050505;overflow:hidden}
+#bander .scene{position:absolute;inset:0}
+#bander .scene svg{width:100%;height:100%;opacity:.5;animation:kb 30s ease-in-out infinite alternate;will-change:transform}
+#bander .story{animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translate3d(0,14px,0)}to{opacity:1;transform:none}}
+#bander .result{animation:fadeUp .5s cubic-bezier(.2,.7,.2,1) both}
+#bander .scene::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.6))}
+#bander .top{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 70px 20px clamp(16px,3vw,40px);z-index:3}
+#bander .top .ttl{font-size:13px;letter-spacing:.2em;color:#aaa;font-weight:700}
+#bander .top .score{font-size:13px;color:#ccc}
+#bander .story{position:absolute;left:0;right:0;top:20%;z-index:3;text-align:center;padding:0 8vw}
+#bander .story .act{color:var(--red);font-weight:800;letter-spacing:.3em;font-size:12px;margin-bottom:16px}
+#bander .story .line{font-family:'Playfair Display',serif;font-size:clamp(22px,3.4vw,46px);line-height:1.2;max-width:1000px;margin:0 auto}
+#bander .story .ctx{color:#aaa;margin-top:14px;font-size:clamp(14px,1.4vw,18px);font-style:italic}
+#bander .choices{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:0 clamp(12px,4vw,60px) clamp(22px,5vh,60px);transition:transform .5s,opacity .5s}
+#bander .choices.off{transform:translateY(40%);opacity:0;pointer-events:none}
+#bander .timer{height:4px;background:rgba(255,255,255,.18);margin:0 auto 18px;max-width:900px;display:flex;justify-content:center}
+#bander .timer i{display:block;height:100%;background:#fff;width:100%}
+#bander .opts{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,2vw,24px);max-width:1000px;margin:0 auto}
+#bander .opt{border:2px solid rgba(255,255,255,.35);background:rgba(0,0,0,.45);padding:clamp(14px,2vw,22px);text-align:center;font-size:clamp(14px,1.6vw,21px);font-weight:600;line-height:1.3;border-radius:2px;transition:all .15s;backdrop-filter:blur(4px)}
+#bander .opt:hover{border-color:#fff;background:rgba(255,255,255,.12);transform:scale(1.02)}
+#bander .opt.pick{background:#fff;color:#000;border-color:#fff}
+#bander .result{position:absolute;left:0;right:0;bottom:clamp(30px,8vh,90px);z-index:4;text-align:center;padding:0 8vw}
+#bander .result p{font-size:clamp(15px,1.7vw,22px);line-height:1.45;max-width:820px;margin:0 auto 22px;color:#e8e8e8}
+#bander .result .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.2em;margin-bottom:12px}
+#bander .end{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 7vw;background:radial-gradient(ellipse at center,rgba(40,0,0,.6),#000 70%)}
+#bander .end .lab{letter-spacing:.4em;font-size:12px;color:#aaa;font-weight:700}
+#bander .end h3{font-family:'Anton';font-size:clamp(36px,6vw,84px);text-transform:uppercase;line-height:.95;margin:14px 0}
+#bander .end p{max-width:640px;color:#ccc;line-height:1.5;font-size:clamp(14px,1.4vw,18px)}
+#bander .end .endings{display:flex;gap:8px;margin:22px 0 4px}
+#bander .end .endings i{width:46px;height:5px;background:#333}#bander .end .endings i.on{background:var(--red)}
+#bander .end small{color:#666;font-size:12px}
+.xbtn{position:absolute;top:18px;right:18px;z-index:9;width:40px;height:40px}
+
+/* ---------- ATS ---------- */
+#ats{position:fixed;inset:0;z-index:170;background:#f4f4f0;color:#111;overflow:auto;font-family:'Space Mono',ui-monospace,monospace}
+#ats .wrap{max-width:820px;margin:0 auto;padding:clamp(20px,5vw,56px) 18px 80px}
+#ats .bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;border-bottom:2px solid #111;padding-bottom:12px;margin-bottom:22px;font-size:12px}
+#ats .bar button{border:2px solid #111;padding:8px 12px;font-family:inherit;font-weight:700;font-size:12px;background:#fff}
+#ats .bar button:hover{background:#111;color:#fff}
+#ats .scan{font-size:12px;line-height:1.7;background:#111;color:#7CFC8a;padding:14px 16px;margin-bottom:26px;white-space:pre-wrap;min-height:9.5em}
+#ats h1{font-size:26px;letter-spacing:.02em}
+#ats h2{font-size:14px;margin:26px 0 8px;border-bottom:1px dashed #999;padding-bottom:4px}
+#ats p,#ats li{font-size:13px;line-height:1.65}
+#ats ul{padding-left:18px}
+#ats mark{background:#fff36b;padding:0 2px}
+#ats .note{margin-top:30px;border:2px dashed #e50914;padding:14px;font-size:12px;color:#7a0000;line-height:1.6}
+
+/* ---------- CONTACT ---------- */
+#contact{position:fixed;inset:0;z-index:260;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto}
+#contact .in{width:min(460px,100%);background:#181818;border-radius:8px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.8);margin:auto}
+#contact .th{aspect-ratio:16/6;position:relative}
+#contact .bd{padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px}
+#contact p{color:#bbb;font-size:14px;line-height:1.5}
+#contact .ln{display:flex;align-items:center;gap:10px;background:#262626;border-radius:4px;padding:10px 12px}
+#contact .ln>span{flex:1;min-width:0;font-weight:600;user-select:all;overflow-wrap:anywhere}
+#contact .ln small{display:block;color:#888;font-weight:500;font-size:11px;letter-spacing:.1em;user-select:none}
+#contact .ln button,#contact .ln a{background:#fff;color:#000;font-weight:700;font-size:13px;padding:7px 12px;border-radius:3px;flex:none}
+#contact .x{position:absolute;top:10px;right:10px;z-index:5;width:34px;height:34px;border-radius:50%;background:#181818;display:flex;align-items:center;justify-content:center}
+#contact .x svg{width:18px}
+/* ---------- MISC ---------- */
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:#e6e6e6;color:#111;padding:12px 18px;border-radius:4px;font-size:14px;font-weight:600;z-index:300;opacity:0;transition:all .3s;max-width:min(560px,92vw);text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#still{position:fixed;inset:0;z-index:250;background:rgba(0,0,0,.86);display:flex;align-items:center;justify-content:center;padding:20px}
+#still .in{max-width:560px;text-align:center}
+#still h3{font-size:clamp(24px,3vw,36px);font-weight:700}
+#still p{color:#aaa;margin:12px 0 26px}
+#still .b{display:flex;flex-direction:column;gap:10px;align-items:center}
+#still .b button,#still .b a{width:min(340px,100%);padding:12px;font-weight:700;border:1px solid #fff}
+#still .b .p1{background:#fff;color:#000}
+#nextep{position:fixed;right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);z-index:80;width:min(360px,calc(100vw - 24px));background:#141414;border:1px solid #333;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.7);transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#nextep.show{transform:none}
+#nextep .th{aspect-ratio:16/7;position:relative}
+#nextep .bd{padding:12px 14px 14px}
+#nextep .lab{font-size:11px;color:#aaa;letter-spacing:.15em;font-weight:700}
+#nextep h4{font-size:16px;margin:4px 0 2px}
+#nextep p{font-size:12.5px;color:#bbb;line-height:1.4}
+#nextep .row2{display:flex;gap:8px;margin-top:12px}
+#nextep .row2 a,#nextep .row2 button{flex:1;text-align:center;padding:9px 6px;border-radius:3px;font-weight:700;font-size:13px}
+#nextep .row2 a{background:#fff;color:#000;display:flex;align-items:center;justify-content:center;gap:8px}
+#nextep .row2 button{background:rgba(109,109,110,.6)}
+#nextep .ring{width:20px;height:20px}
+footer{max-width:980px;margin:30px auto 0;padding:0 var(--pad) 120px;color:#808080;font-size:13px}
+footer .soc{display:flex;gap:18px;margin-bottom:18px}
+footer .soc a{width:28px;height:28px;display:flex}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+footer .cols a:hover{text-decoration:underline}
+footer .code{border:1px solid #808080;padding:6px 10px;display:inline-block;margin-bottom:18px}
+.credits{text-align:center;color:#9a9a9a;font-size:13px;line-height:2;margin:60px auto 40px;max-width:560px}
+.credits b{color:#ddd;display:block;font-size:11px;letter-spacing:.3em;margin-top:14px}
+.results{padding:110px var(--pad) 40px;min-height:70vh}
+.results h2{color:#aaa;font-weight:400;font-size:15px;margin-bottom:20px}
+.results h2 b{color:#fff}
+.results .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px 6px}
+.results .grid .card{flex:none;width:100%}
+.results .empty{max-width:560px;color:#ccc;line-height:1.6}
+
+@media (max-width:900px){
+  header nav{display:none}
+  .mgrid{grid-template-columns:1fr;gap:12px}
+  .more-grid{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:700px){
+  .hero{height:auto;min-height:0;padding:76px 16px 30px}
+  .hero .bgart{filter:blur(28px) brightness(.55);transform:scale(1.3);animation:none}
+  .hero .shade{background:linear-gradient(0deg,var(--bg) 4%,transparent 60%)}
+  .hero .info,.hero .side{display:none}
+  .mobposter{display:block;position:relative;z-index:3;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12)}
+  .mobposter .pv{aspect-ratio:4/5;position:relative}
+  .mobposter .mi{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:16px;text-align:center;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent)}
+  .mobposter .titleart{font-size:clamp(46px,14vw,70px)}
+  .mobposter .genres{justify-content:center;font-size:12.5px;margin:10px 0 12px}
+  .mobposter .btns{justify-content:center;flex-wrap:nowrap}
+  .mobposter .btn{flex:1;justify-content:center;padding:10px 8px;font-size:15px}
+  main{margin-top:0}
+  .card{flex-basis:calc((100vw - 32px - 12px)/2.35)}
+  .t10card{flex-basis:calc((100vw - 32px)/2.1)}
+  .arrow,.pips{display:none}
+  .card .tt{font-size:15px!important}
+  .row h2 .exp{opacity:1;transform:none}
+  #modal{padding:0}
+  #modal .box{border-radius:0;min-height:100%}
+  .more-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .ep{flex-wrap:wrap}
+  .ep .no{display:none}
+  .ep .bd .top{font-size:15px}
+  #bander .opts{grid-template-columns:1fr}
+  #bander .story{top:14%}
+  .me .caret{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <div class="ribbons" aria-hidden="true"></div>
+  <div class="logoA" aria-label="Alexisflix">A</div>
+  <div class="tap" id="introTap">Touchez pour lancer ▶</div>
+  <button class="skip" id="skipIntro">Passer l'intro</button>
+</div>
+
+<!-- PROFILS -->
+<section id="profiles" class="hidden" aria-label="Choix du profil">
+  <span class="brand">ALEXISFLIX</span>
+  <h1>Qui est en train de recruter&nbsp;?</h1>
+  <p class="sub">Choisissez votre profil. L'interface s'adapte à votre poste et à votre niveau de caféine.</p>
+  <div class="plist" id="plist"></div>
+  <button class="manage" id="manage">Gérer les profils</button>
+</section>
+
+<!-- APP -->
+<div id="app" class="hidden">
+  <header id="hdr">
+    <a href="#" class="brand" id="home">ALEXISFLIX</a>
+    <nav>
+      <a href="#" class="on" data-go="top">Accueil</a>
+      <a href="#" data-go="r-saisons">Séries</a>
+      <a href="#" data-go="r-top10">Top compétences</a>
+      <a href="#" data-go="r-soon">Prochainement</a>
+      <a href="#" data-go="r-list">Ma liste</a>
+    </nav>
+    <div class="right">
+      <label class="search" id="search">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span>
+        <input id="q" type="search" placeholder="Titres, compétences, outils" aria-label="Rechercher">
+      </label>
+      <button class="ico bell" id="bell" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1Z"/></svg><span class="dot">5</span></button>
+      <button class="me" id="meBtn" aria-label="Profil"><span class="mini" id="meAv"></span><svg class="caret" width="10" viewBox="0 0 10 6" fill="#fff"><path d="M0 0h10L5 6z"/></svg></button>
+    </div>
+  </header>
+  <div class="drop hidden" id="notifs"></div>
+  <div class="drop hidden" id="memenu"></div>
+
+  <div id="browse">
+    <section class="hero" id="top">
+      <div class="bgart grain" id="heroArt"></div>
+      <div class="shade"></div>
+      <div class="info">
+        <div class="series"><span class="A">A</span> SÉRIE</div>
+        <h1 class="titleart">Chef de<br>projet<em>avec Alexis Druaux</em></h1>
+        <div class="top10badge"><span class="t10"><small>TOP</small><span>10</span></span> N° 1 en Normandie aujourd'hui</div>
+        <p class="tagline">« Je transforme un besoin flou en décision claire. »</p>
+        <p class="syn">Profil hybride IT, relation client et communication. 5 ans d'expérience, 5 à 10 projets pilotés de bout en bout pour des TPE/PME, un site web conçu avec une équipe de développeurs et des automatisations IA qui rendent jusqu'à 10&nbsp;h par semaine aux équipes. Disponible immédiatement.</p>
+        <div class="btns">
+          <button class="btn w" data-play="trailer"><svg viewBox="0 0 24 24" fill="#000"><path d="M6 4v16l14-8z"/></svg>Lecture</button>
+          <button class="btn g" data-open="main"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 11v6M12 7.5v.5"/></svg>Plus d'infos</button>
+        </div>
+      </div>
+      <div class="side">
+        <button class="roundbtn" id="heroSound" aria-label="Son"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9z" fill="#fff"/><path d="m17 9 4 6m0-6-4 6"/></svg></button>
+        <div class="rating"><b>16+</b><span>humour pince-sans-rire, KPI, métaphores ferroviaires</span></div>
+      </div>
+      <div class="mobposter" id="mobPoster"></div>
+    </section>
+
+    <main id="rows"></main>
+
+    <div class="credits" id="credits">
+      <b>RÉALISATION</b>Alexis Druaux
+      <b>SCÉNARIO</b>Une recherche d'emploi, vraie de vraie
+      <b>DIRECTION DE PRODUCTION</b>Un tableau de bord avec des KPI (et un onglet par canal)
+      <b>CASCADES</b>La ligne Rouen – Saint-Lazare
+      <b>DANS LE RÔLE DE L'ANTAGONISTE</b>Un ATS qui lit des mots-clés
+      <b>MUSIQUE ORIGINALE</b>Le téléphone, qui va finir par sonner
+      <b>REMERCIEMENTS</b>Aux recruteurs et recruteuses qui posent encore la question
+      <p style="margin-top:22px;font-size:12px;color:#666">Aucun ATS n'a été maltraité pendant le tournage. Le bracelet all inclusive n'a jamais existé.</p>
+    </div>
+
+    <footer>
+      <div class="soc">
+        <a href="https://www.linkedin.com/in/alexis-druaux" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0"/></svg></a>
+        <a href="#cafe" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+        <a href="Alexis_Druaux_CV_Chef_de_projet.pdf" target="_blank" rel="noopener" aria-label="CV PDF"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg></a>
+      </div>
+      <div class="cols">
+        <a href="Alexis_Druaux_CV_Chef_de_projet.pdf" target="_blank" rel="noopener">CV PDF (compatible ATS)</a>
+        <a href="#" data-ats>Version ATS (texte brut)</a>
+        <a href="#cafe">Centre d'aide : un café</a>
+        <a href="https://www.linkedin.com/in/alexis-druaux" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#cafe">06 45 47 12 92</a>
+        <a href="#" data-bander>Épisode interactif</a>
+        <a href="#" id="legal">Mentions légales</a>
+        <a href="#" id="relaunch">Revoir l'intro</a>
+      </div>
+      <span class="code">Code de service : CAFÉ-76</span>
+      <p>© 2026 Alexis Druaux · Rouen · Mont-Saint-Aignan · Paris Saint-Lazare · Télétravail. Parodie faite main, sans aucun lien avec une plateforme de streaming existante.</p>
+    </footer>
+  </div>
+
+  <div class="results hidden" id="results"></div>
+</div>
+
+<div id="preview"></div>
+<div id="modal" class="hidden" role="dialog" aria-modal="true"><div class="box" id="mbox"></div></div>
+<div id="player" class="hidden"></div>
+<div id="bander" class="hidden"></div>
+<div id="ats" class="hidden"></div>
+<div id="still" class="hidden"></div>
+<div id="nextep" aria-live="polite"></div>
+<div id="contact" class="hidden" role="dialog" aria-modal="true"></div>
+<div id="toast" role="status"></div>
+
+<script>
+/* =========================================================
+   CONFIG : déposer les photos dans /img puis renseigner ici
+   ========================================================= */
+const IMG = {
+  hero: null,        // ex: 'img/hero.jpg'  (paysage 16:9, sujet à droite)
+  heroMobile: null,  // ex: 'img/hero-mobile.jpg' (portrait 4:5)
+  avatar: null,      // ex: 'img/avatar.jpg' (carré)
+  shows: {}          // ex: { rh:'img/rh.jpg', archi:'img/archi.jpg' }
+};
+const MAIL = 'alexdruaux@gmail.com';
+const mailto = (s, b='') => `mailto:${MAIL}?subject=${encodeURIComponent(s)}${b?'&body='+encodeURIComponent(b):''}`;
+const CAFE = '#cafe';
+
+/* ---------- ART SVG ---------- */
+const g = (id, a, b) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>`;
+const ART = {
+  rh: u => `${g('a'+u,'#2b0f3f','#07040b')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <g opacity=".9">${[0,1,2,3,4].map(i=>`<g transform="translate(${40+i*14} ${18+i*3}) rotate(${-14+i*7})"><rect width="34" height="46" rx="1.5" fill="${i==4?'#f1ece4':'#d9d2c7'}" opacity="${.35+i*.15}"/>${[8,13,18,23,28,33].map(y=>`<rect x="5" y="${y}" width="${y==8?14:24}" height="1.6" fill="#555" opacity=".5"/>`).join('')}</g>`).join('')}</g>
+    <circle cx="112" cy="40" r="15" fill="rgba(160,120,255,.12)" stroke="#e8e0ff" stroke-width="2.4"/><path d="m122.5 51 12 12" stroke="#e8e0ff" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="112" cy="40" r="30" fill="url(#a${u})" opacity="0"/><ellipse cx="30" cy="10" rx="70" ry="30" fill="#a26bff" opacity=".18"/>`,
+  b2b: u => `<defs><linearGradient id="a${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a1f05"/><stop offset=".55" stop-color="#c2561a"/><stop offset="1" stop-color="#2a1205"/></linearGradient><radialGradient id="s${u}"><stop offset="0" stop-color="#ffe2a8"/><stop offset=".6" stop-color="#ffb347"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient></defs>
+    <rect width="160" height="90" fill="url(#a${u})"/><circle cx="80" cy="50" r="30" fill="url(#s${u})"/>
+    <g fill="#1a0b03">${[[0,44,14],[13,38,10],[22,48,12],[33,30,9],[41,42,15],[95,36,12],[106,44,9],[114,26,11],[124,40,14],[137,33,10],[146,46,14]].map(([x,y,w])=>`<rect x="${x}" y="${y}" width="${w}" height="${70-y}"/>`).join('')}</g>
+    <g fill="#ffcf7a" opacity=".55">${Array.from({length:26},(_,i)=>`<rect x="${[2,5,15,25,28,35,44,47,50,98,101,108,117,120,127,130,140,149,152][i%19]}" y="${46+(i*7)%20}" width="1.4" height="1.6"/>`).join('')}</g>
+    <rect y="70" width="160" height="20" fill="#120802"/><path d="M80 70 64 90h32z" fill="#2a1406"/>
+    <g fill="#0b0501"><circle cx="80" cy="47.5" r="3"/><path d="M76.4 51.5h7.2l1 11h-2.4l-.8 8.5h-2l-.4-6.5-.4 6.5h-2l-.8-8.5h-2.4z"/><rect x="84" y="59.5" width="6.5" height="5" rx=".8"/><path d="M85.6 59.5v-1.2h3.3v1.2" stroke="#0b0501" fill="none" stroke-width=".7"/></g>
+    <text x="148" y="16" text-anchor="end" font-family="Space Mono" font-size="6.5" font-weight="700" fill="#fff3d6">11 / 43</text><text x="148" y="22" text-anchor="end" font-family="Inter" font-size="3.6" fill="#fff3d6" opacity=".8">comptes signés</text>`,
+  archi: u => `${g('a'+u,'#1c0306','#03090c')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <defs><radialGradient id="r${u}"><stop offset="0" stop-color="#e50914" stop-opacity=".45"/><stop offset="1" stop-color="#e50914" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="118" cy="30" r="40" fill="url(#r${u})"/>
+    <path d="M14 30c6-9 14 5 20-3s10 7 14-2" stroke="#9aa3ad" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-dasharray="2 2.4"/>
+    ${[['Besoin flou',10,'#3b4249','#c9d1d9'],['Cadrage',50,'#5a0b10','#ffb3b8'],['IA',90,'#063b40','#8ff3f8'],['Décision',122,'#e50914','#fff']].map(([t,x,f,c],i)=>`<g transform="translate(${x} ${i?20:36})">${i?`<rect width="${i===3?30:28}" height="15" rx="3" fill="${f}" stroke="${c}" stroke-opacity=".55" stroke-width=".6"/><text x="${(i===3?30:28)/2}" y="9.6" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${i===2?6.5:5}" fill="${c}">${t}</text>`:`<text x="2" y="0" font-family="Inter" font-size="4.6" fill="#c9d1d9" opacity=".85">${t}</text>`}</g>`).join('')}
+    <g stroke="#ff4b55" stroke-width=".8" fill="#ff4b55"><path d="M44 27.5h5"/><path d="M78 27.5h11"/><path d="M118 27.5h3"/></g>
+    <g fill="#ff4b55"><path d="M49 25.6l2 1.9-2 1.9z"/><path d="M89 25.6l2 1.9-2 1.9z"/><path d="M121 25.6l2 1.9-2 1.9z"/></g>
+    <g font-family="Space Mono" font-size="3.6" fill="#ff8a90" opacity=".75"><text x="52" y="44">processus · responsable</text><text x="52" y="49">indicateur · risque</text></g>`,
+  allo: u => `${g('a'+u,'#06214d','#01040c')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <defs><radialGradient id="r${u}"><stop offset="0" stop-color="#5fa8ff" stop-opacity=".35"/><stop offset="1" stop-color="#5fa8ff" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="62" cy="38" r="34" fill="url(#r${u})"/>
+    <path d="M44 42a18 18 0 0 1 36 0" fill="none" stroke="#dbe9ff" stroke-width="3.2" stroke-linecap="round"/>
+    <rect x="39" y="39" width="9" height="15" rx="3.5" fill="#dbe9ff"/><rect x="76" y="39" width="9" height="15" rx="3.5" fill="#dbe9ff"/>
+    <path d="M44 53c0 7 6 9 13 9" fill="none" stroke="#dbe9ff" stroke-width="2"/><rect x="56" y="59.5" width="7" height="4.5" rx="2.2" fill="#dbe9ff"/>
+    <g font-family="Inter" font-weight="700"><path d="M96 14h40a5 5 0 0 1 5 5v9a5 5 0 0 1-5 5h-30l-6 5v-5h-4a5 5 0 0 1-5-5v-9a5 5 0 0 1 5-5z" fill="#ffffff"/><text x="116" y="26" text-anchor="middle" font-size="7.5" fill="#06214d">Allô ?</text>
+    <path d="M104 40h34a5 5 0 0 1 5 5v7a5 5 0 0 1-5 5h-4v5l-6-5h-24a5 5 0 0 1-5-5v-7a5 5 0 0 1 5-5z" fill="#2e6bd8"/><text x="121" y="50.5" text-anchor="middle" font-size="5" fill="#fff">50 à 100 / jour</text></g>`,
+  sentinel: u => `${g('a'+u,'#012b1f','#010806')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <g stroke="#2ef0a2" stroke-width=".4" opacity=".55">${Array.from({length:13},(_,i)=>`<line x1="${80+(i-6)*4}" y1="48" x2="${80+(i-6)*30}" y2="90"/>`).join('')}${[50,53,57,63,71,82].map(y=>`<line x1="0" y1="${y}" x2="160" y2="${y}"/>`).join('')}</g>
+    <circle cx="80" cy="40" r="17" fill="#0a5"/><circle cx="80" cy="40" r="17" fill="none" stroke="#7affc8" stroke-width="1.2"/>
+    <path d="M80 26l11 4v8c0 7-5 12-11 15-6-3-11-8-11-15v-8z" fill="#03140e" stroke="#7affc8" stroke-width="1.2"/><circle cx="80" cy="39" r="3" fill="#7affc8"/>
+    <g fill="#7affc8" opacity=".6">${Array.from({length:18},(_,i)=>`<circle cx="${(i*37)%160}" cy="${(i*13)%40}" r=".7"/>`).join('')}</g>`,
+  conseil: u => `${g('a'+u,'#3d0618','#0b0205')}<rect width="160" height="90" fill="url(#a${u})"/>
+    ${[0,1,2,3,4].map(i=>`<rect x="${28+i*22}" y="30" width="9" height="44" fill="#f2c9d4" opacity="${.18+i*.04}"/>`).join('')}
+    <path d="M20 30h120l-60-16z" fill="#f2c9d4" opacity=".3"/><rect x="20" y="74" width="120" height="4" fill="#f2c9d4" opacity=".3"/>
+    <g transform="translate(98 40) rotate(-35)"><rect x="-4" y="-14" width="22" height="11" rx="2" fill="#ffd9e2"/><rect x="5" y="-3" width="3.4" height="26" fill="#ffd9e2"/></g>
+    <ellipse cx="80" cy="20" rx="60" ry="18" fill="#ff5c86" opacity=".14"/>`,
+  next: u => `<rect width="160" height="90" fill="#050505"/><path d="M70 0h20l34 90H36z" fill="#fff" opacity=".07"/><path d="M75 0h10l22 90H53z" fill="#fff" opacity=".07"/>
+    <ellipse cx="80" cy="80" rx="34" ry="5" fill="#fff" opacity=".12"/>
+    <g fill="#2a2a2a" stroke="#888" stroke-width=".6"><rect x="70" y="48" width="20" height="5"/><rect x="70" y="30" width="20" height="18" rx="2"/><path d="M72 53v26M88 53v26"/></g>
+    <text x="80" y="44" text-anchor="middle" font-family="Anton" font-size="12" fill="#e50914">?</text>`,
+  psy: u => `${g('a'+u,'#1f1d3a','#05050c')}<rect width="160" height="90" fill="url(#a${u})"/>
+    ${[1,2,3,4,5].map(i=>`<circle cx="80" cy="45" r="${i*9}" fill="none" stroke="#c7b8ff" stroke-width=".5" opacity="${.6-i*.09}"/>`).join('')}
+    <text x="80" y="57" text-anchor="middle" font-family="Playfair Display" font-weight="900" font-size="34" fill="#efe9ff">Ψ</text>`,
+  diplome: u => `${g('a'+u,'#2d2410','#090704')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <path d="M80 22 120 38 80 54 40 38z" fill="#e9d79a"/><path d="M56 45v14c0 5 11 9 24 9s24-4 24-9V45l-24 9z" fill="#c5ae63"/><path d="M118 39v20" stroke="#e9d79a" stroke-width="1.4"/><circle cx="118" cy="61" r="2.4" fill="#e9d79a"/>
+    <g fill="#e9d79a" opacity=".5">${Array.from({length:14},(_,i)=>`<circle cx="${(i*41)%160}" cy="${(i*23)%90}" r=".8"/>`).join('')}</g>`,
+  funnel: u => `${g('a'+u,'#102a2d','#030809')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <path d="M40 14h80L92 46v26l-24 8V46z" fill="none" stroke="#66e3d6" stroke-width="1.6"/>
+    ${Array.from({length:26},(_,i)=>`<circle cx="${46+(i*29)%70}" cy="${18+(i%5)*5}" r="1.6" fill="#66e3d6" opacity=".8"/>`).join('')}
+    <circle cx="80" cy="66" r="2.6" fill="#ffd95e"/><circle cx="80" cy="66" r="7" fill="#ffd95e" opacity=".2"/>
+    <g stroke="#66e3d6" opacity=".35" stroke-width=".5"><path d="M118 80V60M126 80V50M134 80V40M142 80V30"/></g>`,
+  train: u => `${g('a'+u,'#0d1430','#020309')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <path d="M70 50h20l50 40H20z" fill="#0a0d18"/><g stroke="#8a93b8" stroke-width=".9"><path d="M78 50 46 90M82 50l32 40"/></g>
+    <g stroke="#8a93b8" stroke-width=".6" opacity=".6">${[52,56,61,68,77,88].map((y,i)=>`<line x1="${78-(y-50)*.8}" y1="${y}" x2="${82+(y-50)*.8}" y2="${y}"/>`).join('')}</g>
+    <circle cx="80" cy="47" r="3.2" fill="#fff6c2"/><circle cx="80" cy="47" r="12" fill="#fff6c2" opacity=".18"/>
+    <circle cx="128" cy="22" r="11" fill="none" stroke="#ff5c5c" stroke-width="1.4"/><path d="M128 15v7l5 3" stroke="#ff5c5c" stroke-width="1.4" fill="none"/>
+    <text x="128" y="42" font-family="Space Mono" font-size="5" fill="#ff5c5c" text-anchor="middle">+20 min</text>`,
+  trou: u => `${g('a'+u,'#173a12','#050d04')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <ellipse cx="80" cy="60" rx="38" ry="11" fill="#030503"/><ellipse cx="80" cy="58" rx="38" ry="10" fill="none" stroke="#5a3a1a" stroke-width="2"/>
+    <path d="M118 56c6-4 12-3 16 0-5 3-10 4-16 0z" fill="#5a3a1a"/><g transform="translate(124 26) rotate(20)"><rect x="-1" y="0" width="2.4" height="26" fill="#a17a4b"/><path d="M-5 26h11l-1 9c-2 2-7 2-9 0z" fill="#9aa0a6"/></g>
+    <g fill="#cfe8c4" opacity=".5">${[0,1,2].map(i=>`<rect x="${50+i*22}" y="16" width="16" height="12" rx="1.5" fill="none" stroke="#cfe8c4" stroke-width=".7"/><path d="M${52+i*22} 20h12" stroke="#cfe8c4" stroke-width=".7"/><path d="M${53+i*22} 22l10 5M${63+i*22} 22l-10 5" stroke="#e50914" stroke-width=".9"/>`).join('')}</g>`,
+  cristal: u => `${g('a'+u,'#25073a','#06020b')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <circle cx="80" cy="42" r="24" fill="#b07cff" opacity=".18"/><circle cx="80" cy="42" r="20" fill="none" stroke="#e5d4ff" stroke-width="1.2"/>
+    <circle cx="80" cy="42" r="20" fill="url(#a${u})" opacity=".4"/><text x="80" y="47" text-anchor="middle" font-size="14">🥱</text>
+    <path d="M64 64h32l-4 8H68z" fill="#3d2559" stroke="#e5d4ff" stroke-width=".8"/><circle cx="72" cy="34" r="3" fill="#fff" opacity=".35"/>`,
+  cafe: u => `${g('a'+u,'#2a1608','#070302')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <path d="M60 40h34v18c0 8-7 14-17 14s-17-6-17-14z" fill="#f2e6d8"/><path d="M94 45h5a6 6 0 0 1 0 12h-5" stroke="#f2e6d8" stroke-width="2.5" fill="none"/>
+    <ellipse cx="77" cy="40" rx="17" ry="3.2" fill="#5b3015"/><ellipse cx="77" cy="74" rx="30" ry="3" fill="#000" opacity=".5"/>
+    ${[0,1,2].map(i=>`<path d="M${70+i*7} 34c-3-5 3-8 0-13" stroke="#fff" stroke-width="1" fill="none" opacity=".35"/>`).join('')}
+    <ellipse cx="40" cy="20" rx="50" ry="20" fill="#ff9a4d" opacity=".12"/>`,
+  cadre: u => `${g('a'+u,'#13261c','#040a07')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <g transform="translate(38 2) scale(.82)"><rect x="50" y="10" width="60" height="62" rx="2" fill="#f3efe4"/><rect x="66" y="6.5" width="28" height="8" rx="2" fill="#7a6a45"/>
+    ${['Processus','Responsable','Indicateur','Risque'].map((t,i)=>`<g transform="translate(56 ${21+i*12})"><rect width="7" height="7" rx="1" fill="${i===3?'#e50914':'#1f6f4a'}"/><text x="3.5" y="5.6" text-anchor="middle" font-family="Inter" font-weight="800" font-size="5.2" fill="#fff">${i+1}</text><text x="11" y="5.6" font-family="Inter" font-weight="700" font-size="5.6" fill="#1c1c1c">${t}</text></g>`).join('')}</g>`,
+  regles: u => `${g('a'+u,'#2a0c3d','#07020b')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <g transform="translate(46 -6) scale(.78)"><path d="M80 22c-10-6-26-6-34-2v46c8-4 24-4 34 2z" fill="#efe8ff"/><path d="M80 22c10-6 26-6 34-2v46c-8-4-24-4-34 2z" fill="#d9ccff"/><path d="M80 22v46" stroke="#7a5bbf" stroke-width=".8"/>
+    <g stroke="#7a5bbf" stroke-width=".7" opacity=".7">${[30,35,40,45,50,55].map(y=>`<path d="M51 ${y}h23M86 ${y}h23"/>`).join('')}</g>
+    <circle cx="120" cy="22" r="10" fill="#e50914"/><text x="120" y="26.6" text-anchor="middle" font-family="Anton" font-size="13" fill="#fff">?</text></g>
+    <text x="12" y="20" font-family="Anton" font-size="12" fill="#fff">41 %</text><text x="12" y="25.5" font-family="Inter" font-size="3.6" fill="#d9ccff">utilisent l'IA</text>
+    <text x="44" y="20" font-family="Anton" font-size="12" fill="#ff6b73">12 %</text><text x="44" y="25.5" font-family="Inter" font-size="3.6" fill="#d9ccff">ont une stratégie</text>`,
+  agents: u => `${g('a'+u,'#062a2e','#010708')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <path d="M40 30a14 14 0 0 1 26-6 11 11 0 0 1 20 2 10 10 0 0 1 14 9H38a8 8 0 0 1 2-5z" fill="#123f44" stroke="#5fe3ea" stroke-width=".6"/>
+    ${[0,1,2].map(i=>`<g transform="translate(${44+i*26} 42)"><rect width="18" height="15" rx="3" fill="#0d2427" stroke="#5fe3ea" stroke-width="1"/><circle cx="6" cy="7" r="1.8" fill="#5fe3ea"/><circle cx="12" cy="7" r="1.8" fill="#5fe3ea"/><path d="M6 11.5h6" stroke="#5fe3ea" stroke-width="1"/><path d="M9 0v-4" stroke="#5fe3ea" stroke-width="1"/><circle cx="9" cy="-5" r="1.4" fill="#e50914"/><path d="M9 -10V-15" stroke="#5fe3ea" stroke-width=".5" stroke-dasharray="1 1"/></g>`).join('')}
+`,
+  bureau: u => `${g('a'+u,'#1b2430','#05070a')}<rect width="160" height="90" fill="url(#a${u})"/>
+    <g transform="translate(46 22)"><path d="M0 18 18 4l18 14v24H0z" fill="#2c3a4c" stroke="#9fb4cc" stroke-width=".8"/><rect x="13" y="28" width="10" height="14" fill="#9fb4cc"/><rect x="5" y="22" width="7" height="6" fill="#ffd27a"/><rect x="24" y="22" width="7" height="6" fill="#ffd27a"/></g>
+    <g transform="translate(96 30)" stroke="#9fb4cc" stroke-width="1.6" fill="none" stroke-linecap="round"><rect x="2" y="0" width="16" height="14" rx="2" fill="#2c3a4c"/><path d="M0 18h20M10 18v10M3 32l7-4 7 4"/></g>
+    <text x="80" y="15" text-anchor="middle" font-family="Anton" font-size="11" fill="#fff">9 %</text>
+    <text x="80" y="23" text-anchor="middle" font-family="Space Mono" font-size="3.6" fill="#9fb4cc">des entreprises · Apec 2026</text>`,
+  reseau: u => `<defs><radialGradient id="h${u}" cx=".6" cy=".4" r=".7"><stop offset="0" stop-color="#5b0b10"/><stop offset=".6" stop-color="#160406"/><stop offset="1" stop-color="#050505"/></radialGradient><radialGradient id="k${u}"><stop offset="0" stop-color="#ff3b45" stop-opacity=".55"/><stop offset="1" stop-color="#ff3b45" stop-opacity="0"/></radialGradient><radialGradient id="c${u}"><stop offset="0" stop-color="#3fe0ea" stop-opacity=".5"/><stop offset="1" stop-color="#3fe0ea" stop-opacity="0"/></radialGradient></defs>
+    <rect width="160" height="90" fill="url(#h${u})"/>
+    <g stroke="#ff4b55" stroke-width=".55" opacity=".6" fill="none"><path d="M30 64 58 30 86 50 112 18 140 40M58 30 70 78 86 50M112 18 124 70 140 40M70 78 124 70"/></g>
+    ${[[30,64,'k',2.2],[58,30,'c',3.2],[86,50,'k',4],[112,18,'k',2.8],[140,40,'c',2.4],[70,78,'k',2],[124,70,'c',2.6]].map(([x,y,g,r])=>`<circle cx="${x}" cy="${y}" r="${r*4}" fill="url(#${g}${u})"/><circle cx="${x}" cy="${y}" r="${r}" fill="${g==='k'?'#ff3b45':'#7af5fb'}"/>`).join('')}`,
+  ia: u => ART.archi(u),
+  ats: u => `<rect width="160" height="90" fill="#06120a"/><g font-family="Space Mono" font-size="4.2" fill="#46d369" opacity=".55">${Array.from({length:14},(_,i)=>`<text x="6" y="${8+i*6}">${['> parse(cv.pdf)','> keywords: 26 found','> autonome: OK','> polyvalent: OK','> stress: 2400W','> humour: NON INDEXÉ','> personnalité: ???','> score: 99.8%','> trou_3_mois: FLAG','> verdict: appeler','> ...','> ...','> ...','> █'][i]}</text>`).join('')}</g>
+    <circle cx="118" cy="45" r="18" fill="none" stroke="#e50914" stroke-width="1.5"/><circle cx="118" cy="45" r="5" fill="#e50914"/><circle cx="118" cy="45" r="11" fill="#e50914" opacity=".18"/>`
+};
+let uid = 0;
+function poster(show, {portrait=false, ribbon=null, top10=false, big=false}={}) {
+  const u = 'u'+(uid++), key = show.art;
+  const photo = IMG.shows[show.id];
+  const vb = portrait ? '0 0 90 135' : '0 0 160 90';
+  const inner = portrait ? `<g transform="translate(-75 0) scale(1.5)">${ART[key](u)}</g>` : ART[key](u);
+  const f = show.font || {};
+  const fs = (portrait ? f.p : f.l) || (big ? 'clamp(28px,5vw,58px)' : 'clamp(14px,1.55vw,26px)');
+  const sz = big ? `clamp(30px,5.4vw,64px)` : fs;
+  return `<div class="poster${portrait?' port':''}${ribbon?' rib':''}">
+    ${photo ? `<img class="photo" src="${photo}" alt="">` : `<svg class="art" viewBox="${vb}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${portrait?`<rect width="90" height="135" fill="#000"/>`:''}${inner}</svg>`}
+    <div class="vig"></div><span class="A">A</span>
+    ${top10?`<span class="t10s"><small>TOP</small>10</span>`:''}
+    <div class="tt" style="font-family:${f.fam||"'Anton'"};font-size:${sz};${f.css||''}">${show.title}</div>
+    ${ribbon?`<span class="ribbon">${ribbon}</span>`:''}
+  </div>`;
+}
+
+/* ---------- DONNÉES ---------- */
+const SEASONS = [
+  { n:1, label:'Saison 1 : Les Coulisses du recrutement', period:'Mai 2021 – juil. 2022', org:'Randstad · CDI', art:'rh',
+    eps:[
+      ['Le portefeuille','48 min','Référent régional du secteur public chez Randstad : plus de 150 clients à suivre, chacun avec ses urgences, ses habitudes et ses lundis matin.','150+ clients'],
+      ['Planning 150','51 min','Le planning de 150 intérimaires. Aucun lundi ne ressemble au précédent, et c’est tant mieux pour la gestion des risques.','150 intérimaires planifiés'],
+      ['De l’autre côté du bureau','55 min','Plus de 120 recrutements complets. C’est ici qu’il a lu des CV qui finissent par tous se ressembler, et appris qu’un coup de fil en dit plus qu’un mot-clé.','120+ recrutements'],
+    ]},
+  { n:2, label:'Saison 2 : Commando B2B', period:'Janv. – oct. 2023', org:'Staffmatch · Bouygues Telecom · CDD', art:'b2b',
+    eps:[
+      ['43 portes','46 min','Chargé d’affaires B2B chez Staffmatch (janv.–mars 2023) : 43 entreprises prospectées en Normandie, 11 comptes signés. À l’époque, les portes s’ouvraient encore sans redirection d’URL.','11 comptes signés en 3 mois'],
+      ['25 par jour','42 min','Conseiller de vente chez Bouygues Telecom (mai–oct. 2023) : 25 clients par jour, objectifs dépassés.','120 % des objectifs'],
+    ]},
+  { n:3, label:'Saison 3 : L’Architecte', period:'Mai 2023 – juin 2025', org:'Consultant indépendant · Rouen', art:'archi',
+    eps:[
+      ['Le cadrage','58 min','5 à 10 projets pilotés de bout en bout pour des TPE/PME. Tout commence par le cadrage, le cahier des charges et une analyse comparative honnête.','5 à 10 projets de A à Z'],
+      ['Jalons','52 min','Planning, jalons, recette, déploiement. Faire avancer des équipes sans leur donner l’impression de passer devant un jury du Nobel.','Livré, recetté, déployé'],
+      ['Les 10 heures','49 min','Automatisation par l’IA avec les API OpenAI et Anthropic et n8n. Résultat : jusqu’à 10 heures rendues chaque semaine aux métiers.','Jusqu’à 10 h/semaine économisées'],
+      ['Le serveur du placard','44 min','Mise en place d’une infrastructure Linux auto-hébergée : agent IA, RAG (génération augmentée), bots. Le placard ronronne, l’équipe respire.','Infra auto-hébergée'],
+      ['La transmission','47 min','Conception de 2 programmes de formation, de la prospection au closing. Un outil ne sert à rien si personne ne sait s’en servir.','2 programmes de formation'],
+    ]},
+  { n:4, label:'Saison 4 : Allô ?', period:'Août 2025 – juin 2026', org:'Heyme (assurance de personnes) · CDD', art:'allo',
+    eps:[
+      ['50 à 100 par jour','45 min','Conseil et suivi de 50 à 100 clients par jour au téléphone, par e-mail et par chat. Portefeuille dans le CRM, réclamations comprises.','50–100 clients/jour'],
+      ['600 personnes','53 min','Stands et conférences devant plus de 600 personnes, en français et en anglais. Le trac existe, la préparation aussi.','600+ personnes, FR/EN'],
+      ['Prévention','41 min','Ateliers de prévention santé en Normandie et en Île-de-France. Premiers allers-retours Rouen – Saint-Lazare en conditions réelles.','Normandie + Île-de-France'],
+    ]},
+];
+const SHOWS = {
+  main:{ id:'main', title:'Chef de projet', art:'reseau', kind:'Série', match:98, year:'2021', len:'4 saisons', age:'16+', progress:82,
+    font:{fam:"'Anton'"}, genres:['Gestion de projet','Comédie de bureau','Feel-good'],
+    syn:'« Je transforme un besoin flou en décision claire. » Un chef de projet hybride traverse quatre saisons, du recrutement au conseil client en passant par l’IA, et apprend à chaque fois la même leçon : pour savoir ce qu’une personne sait faire, il faut lui parler.',
+    cast:'Alexis Druaux, un ATS, la ligne Rouen – Saint-Lazare', mood:'Pince-sans-rire, orienté KPI, rassurant', seasons:SEASONS },
+  rh:{ id:'rh', title:'Les Coulisses<br>du recrutement', art:'rh', kind:'Saison 1', season:1, match:97, year:'2021', len:'3 épisodes', age:'13+', font:{fam:"'Playfair Display'",css:'font-weight:900;font-style:italic'}, genres:['Thriller RH','Docu-réalité','Grands comptes'], syn:'Avant d’être candidat, il a été recruteur. 120 recrutements plus tard, il connaît le décor par cœur.' },
+  b2b:{ id:'b2b', title:'Commando<br>B2B', art:'b2b', kind:'Saison 2', season:2, match:95, year:'2023', len:'2 épisodes', age:'13+', font:{fam:"'Anton'",css:'letter-spacing:.04em;text-transform:uppercase'}, genres:['Action','Prospection terrain','Closing'], syn:'43 entreprises prospectées. 11 signatures. Un costume qui a beaucoup marché.' },
+  archi:{ id:'archi', title:'L’Architecte', art:'archi', kind:'Saison 3', season:3, match:99, year:'2023', len:'5 épisodes', age:'16+', font:{fam:"'Archivo Black'",css:'text-transform:uppercase;letter-spacing:-.02em'}, genres:['Science-fiction réaliste','IA','Agile'], syn:'Indépendant, il pilote des projets de bout en bout pour des TPE/PME et branche l’IA là où elle rend vraiment du temps.' },
+  allo:{ id:'allo', title:'Allô&nbsp;?', art:'allo', kind:'Saison 4', season:4, match:96, year:'2025', len:'3 épisodes', age:'Tous publics', font:{fam:"'Bebas Neue'",css:'letter-spacing:.06em'}, genres:['Relation client','Prise de parole','Bilingue'], syn:'50 à 100 clients par jour, des conférences devant 600 personnes, et une réponse à chaque réclamation.' },
+  sentinel:{ id:'sentinel', title:'Sentinel', art:'sentinel', kind:'Spin-off', match:94, year:'2021', len:'Mini-série · 3 épisodes', age:'13+', font:{fam:"'Archivo Black'",css:'text-transform:uppercase;letter-spacing:.12em'}, genres:['Web','Communauté','Bénévolat'],
+    syn:'Chef de projet digital et chargé de communication bénévole (nov. 2021 – sept. 2025) : un site web à concevoir avec les développeurs et une communauté de 500 membres à faire vivre.',
+    eps:[['Le cahier des fonctionnalités','50 min','Cahier des fonctionnalités, étude de faisabilité, arborescence, coordination des développeurs (Tailwind CSS, Three.js, Sanity, GitHub).','Site web conçu de A à Z'],
+         ['500 membres','46 min','Animation d’une communauté Discord de plus de 500 membres : rôles, anti-bots, bots no-code et low-code.','500+ membres'],
+         ['Fact-check','43 min','Rédaction et fact-checking, recrutement et formation des modérateurs.','Équipe de modération formée']] },
+  conseil:{ id:'conseil', title:'Le Conseil', art:'conseil', kind:'Spin-off', match:92, year:'2025', len:'Mini-série · 2 épisodes', age:'Tous publics', font:{fam:"'Playfair Display'",css:'font-weight:900'}, genres:['Drame institutionnel','Négociation','Bénévolat'],
+    syn:'Représentant des étudiants à l’UNiED (IED Paris 8), 2025–2026 : des dossiers à monter, des conseils à préparer, des arguments à négocier.',
+    eps:[['20 dossiers','44 min','Dossiers juridiques et stratégiques montés et suivis pour le conseil mensuel : 20 demandes portées.','20 dossiers'],
+         ['Benchmark','39 min','Guides de négociation et benchmark. Quand on arrive avec des chiffres, la discussion change de ton.','Guides de négociation']] },
+  psy:{ id:'psy', title:'Psyché', art:'psy', kind:'Préquel', match:93, year:'2025', len:'En cours de diffusion', age:'Tous publics', font:{fam:"'Playfair Display'",css:'font-style:italic'}, genres:['Psychologie','Formation continue'], syn:'1re année de licence de psychologie à l’IED Paris 8, à distance. Pour comprendre les humains derrière les CV, y compris le sien.' },
+  diplomes:{ id:'diplomes', title:'Mention<br>Très Bien', art:'diplome', kind:'Préquel', match:91, year:'2016', len:'Trilogie', age:'Tous publics', font:{fam:"'Playfair Display'",css:'font-weight:900'}, genres:['Formation','Marketing','Négociation'],
+    syn:'La trilogie des origines.',
+    eps:[['Bachelor Marketing & Communication','2019–2020','École Internationale Tunon, Caen. Mention Très Bien.','Mention TB'],
+         ['BTS Négociation et Relation Client','2017–2019','Lycée Jehan Ango, Dieppe. Mention Très Bien.','Mention TB'],
+         ['DUT Techniques de commercialisation','2016–2017','1re année, Faculté de Droit et d’Économie de Rouen.','1re année']] },
+  funnel:{ id:'funnel', title:'Le Funnel', art:'funnel', kind:'Docu-série', match:90, year:'2026', len:'Saison 6', age:'16+', font:{fam:"'Bebas Neue'",css:'letter-spacing:.08em'}, genres:['Docu-réalité','Data','Suspense'], progress:72,
+    syn:'Quatre CV compatibles ATS, deux versions sur mesure à chaque envoi, un onglet par canal et des KPI partout. Le funnel est actif. La conversion, c’est le prochain épisode.' },
+  train:{ id:'train', title:'Direction<br>Saint-Lazare', art:'train', kind:'Documentaire', match:88, year:'2026', len:'1 h 12 (+ 20 min de retard)', age:'Tous publics', font:{fam:"'Anton'",css:'text-transform:uppercase'}, genres:['Gestion des risques','Road-movie','Ferroviaire'], progress:35,
+    syn:'Rouen ou Mont-Saint-Aignan, et Paris s’il le faut. Gérer les aléas du train vers Saint-Lazare : de la gestion des risques niveau expert.' },
+  trou:{ id:'trou', title:'Le Trou de<br>trois mois', art:'trou', kind:'Film', match:61, year:'2024', len:'1 h 30', age:'13+', font:{fam:"'Playfair Display'",css:'font-weight:900'}, genres:['Mystère','Drame','Inspiré de faits réels'], progress:90,
+    syn:'« Ah. Vous avez pris des vacances, quoi. » Non. Une période assumée, des obstacles, et un processus de recrutement de deux mois. La fin n’est racontée qu’à l’oral, autour d’un café.' },
+  cristal:{ id:'cristal', title:'Trop<br>qualifié', art:'cristal', kind:'Film', match:12, year:'2026', len:'1 h 45', age:'16+', font:{fam:"'Archivo Black'",css:'text-transform:uppercase'}, genres:['Science-fiction','Prédiction','Absurde'], progress:15,
+    syn:'Un candidat postule à un métier qu’il aime et par lequel il a commencé. Il est écarté pour un ennui qu’il n’a pas encore eu. Une cellule de prédiction RH, un bâillement futur, aucune caméra cachée.' },
+  ats:{ id:'ats', title:'Terminator<br>v9.0', art:'ats', kind:'Version alternative', match:100, year:'2026', len:'Texte brut', age:'Robots', font:{fam:"'Space Mono'",css:'font-weight:700;text-transform:uppercase'}, genres:['Mots-clés','Sobre','Compatible'], syn:'La version texte brut du CV, pensée pour les ATS. Garantie sans humour. Les mots-clés sont surlignés pour vous faire gagner du temps.' },
+  bander:{ id:'bander', title:'Le Parcours<br>candidat', art:'trou', kind:'Épisode interactif', match:99, year:'2026', len:'≈ 3 min · 3 fins', age:'Recruteurs', font:{fam:"'Playfair Display'",css:'font-weight:900;font-style:italic'}, genres:['Interactif','Comédie','Vous décidez'], syn:'Cette fois, c’est vous qui recrutez. Quatre scènes, deux choix à chaque fois, trois fins possibles. Une seule mène au café.' },
+  cadre:{ id:'cadre', title:'Le cadre<br>d’abord', art:'cadre', kind:'Documentaire · post LinkedIn', doc:true, match:97, year:'16 oct. 2026', len:'Carrousel · 11 pages', age:'Dirigeants', font:{fam:"'Playfair Display'",css:'font-weight:900'}, genres:['IA','PME normandes','Méthode'],
+    syn:'80 % des gens disent que l’IA les rend plus productifs, 37 % en voient l’effet sur les résultats. La différence se perd dans le cadre : quatre lignes (processus, responsable, indicateur, risque) avant de choisir l’outil.', cast:'Alexis Druaux, une PME de menuiserie de Seine-Maritime, un melon', mood:'Concret, sourcé, appliqué' },
+  regles:{ id:'regles', title:'Qui a écrit<br>les règles ?', art:'regles', kind:'Documentaire · post LinkedIn', doc:true, match:95, year:'15 oct. 2026', len:'Carrousel · 9 pages', age:'DRH', font:{fam:"'Anton'",css:'text-transform:uppercase'}, genres:['IA','Gouvernance','RH'],
+    syn:'41 % des entreprises normandes utilisent l’IA, 12 % ont une stratégie claire. Un cas d’usage, ce n’est pas un abonnement : c’est un processus, un responsable, un indicateur et un risque. S’il en manque un, ce n’est pas encore un projet.', cast:'Alexis Druaux, la CCI de Normandie, la Banque de France', mood:'Chiffré, direct' },
+  agents:{ id:'agents', title:'Agents IA', art:'agents', kind:'Documentaire · post LinkedIn', doc:true, match:94, year:'8 oct. 2026', len:'Carrousel · 10 pages', age:'Comités de direction', font:{fam:"'Archivo Black'",css:'text-transform:uppercase'}, genres:['IA','Transformation digitale','Conduite du changement'],
+    syn:'Trois géants ont sorti des agents IA en six semaines, et aucun ne règle le vrai problème : décrire les processus, former les équipes, préparer les métiers. Ce n’est pas un achat, c’est un projet. Et c’est le métier qu’il veut faire.', cast:'Alexis Druaux, trois géants de la tech, votre prochain comité', mood:'Lucide, orienté projet' },
+  bureau:{ id:'bureau', title:'Le grand<br>retour au bureau', art:'bureau', kind:'Documentaire · post LinkedIn', doc:true, match:92, year:'7 oct. 2026', len:'Post', age:'Managers', font:{fam:"'Bebas Neue'",css:'letter-spacing:.05em'}, genres:['Travail hybride','Recrutement','Données Apec'],
+    syn:'Le grand retour au bureau ne concerne que 9 % des entreprises (Apec, mars 2026). Vu depuis le recrutement : les finalistes qui disparaissent entre deux entretiens à cause des trois jours sur site.', cast:'Alexis Druaux, l’Apec, vos finalistes', mood:'Contre-intuitif, documenté' },
+  soon:{ id:'soon', title:'Saison 5<br>chez vous', art:'next', kind:'Prochainement', match:99, year:'2026', len:'Date de sortie : dès votre appel', age:'Tous publics', font:{fam:"'Anton'",css:'text-transform:uppercase'}, genres:['Gestion de projet','Votre équipe','Avenir proche'],
+    syn:'Nouveau poste de chef de projet, autour de Rouen, Mont-Saint-Aignan ou à Paris. Casting ouvert. Le rôle principal est déjà trouvé, il manque l’équipe et le décor.' },
+  cafe:{ id:'cafe', title:'Le Processus<br>de deux mois', art:'cafe', kind:'Épisode spécial', match:100, year:'2026', len:'Uniquement à l’oral', age:'Tous publics', font:{fam:"'Playfair Display'",css:'font-weight:900;font-style:italic'}, genres:['Récit','Inédit','Café compris'], syn:'L’histoire complète du processus de recrutement de deux mois. Pas de bande-annonce, pas de pièce jointe : c’est plus savoureux à l’oral.' },
+};
+const SKILLS = [
+  ['Gestion de projet agile','Scrum, Kanban, cadrage, planning et jalons, reporting.','reseau'],
+  ['IA & automa­tisation','API OpenAI et Anthropic, n8n, agents IA, RAG, MCP, bots.','agents'],
+  ['Relation client','Conseil, CRM, portefeuille de 150+ clients, réclamations.','allo'],
+  ['Cahier des charges','Étude de faisabilité, analyse comparative, arborescence.','cadre'],
+  ['Recette & déploiement','Livrer, tester, déployer, puis former les équipes.','funnel'],
+  ['Prise de parole','Conférences devant 600+ personnes, en français et en anglais.','conseil'],
+  ['Prospection B2B','43 entreprises prospectées, 11 comptes signés, négociation.','b2b'],
+  ['Communication','Rédaction, fact-checking, community management (500+ membres).','sentinel'],
+  ['Outils','GitHub, Linux, Tailwind CSS, Sanity, Canva, Slack, Office, Google Workspace.','archi'],
+  ['Gestion des aléas SNCF','Rouen – Saint-Lazare. Niveau expert, certifié par les retards.','train'],
+];
+const SKILL_FONTS = ["'Anton'","'Archivo Black'","'Bebas Neue'","'Playfair Display'"];
+
+/* ---------- PROFILS ---------- */
+const face = (bg, extra='') => `<svg viewBox="0 0 100 100"><rect width="100" height="100" fill="${bg}"/>${extra}</svg>`;
+const smile = (c='#fff') => `<rect x="28" y="32" width="9" height="16" rx="2" fill="${c}"/><rect x="63" y="32" width="9" height="16" rx="2" fill="${c}"/><path d="M24 62c12 16 40 16 52 0" stroke="${c}" stroke-width="7" fill="none" stroke-linecap="round"/>`;
+const PROFILES = [
+  { id:'rec', name:'Recruteur·euse', note:'Accès complet, café servi', av: face('#e50914', smile()), hello:'Bonjour ! Votre café est servi. La série commence quand vous voulez.' },
+  { id:'mgr', name:'Manager pressé·e', note:'Le résumé en 30 secondes', av: face('#2e6bd8', smile()+`<path d="M46 72h8l4 26H42z" fill="#0d2a66"/><path d="M44 72l6 6 6-6z" fill="#fff"/>`), hello:'Mode 30 secondes activé. Voici l’essentiel.' },
+  { id:'ats', name:'Robot ATS', note:'Terminator v9.0, texte brut', av: face('#1d1d1d', `<rect x="24" y="30" width="52" height="40" rx="6" fill="none" stroke="#46d369" stroke-width="4"/><circle cx="40" cy="48" r="5" fill="#e50914"/><circle cx="60" cy="48" r="5" fill="#e50914"/><path d="M38 61h24" stroke="#46d369" stroke-width="4"/><path d="M50 30V18" stroke="#46d369" stroke-width="4"/><circle cx="50" cy="16" r="4" fill="#46d369"/>`), hello:'' },
+  { id:'nobel', name:'Jury du Nobel', note:'N+2, N+3 et N+4 en salle', av: face('#d8a72e', `<circle cx="34" cy="40" r="10" fill="#fff"/><circle cx="66" cy="40" r="10" fill="#fff"/><path d="M44 40h12" stroke="#fff" stroke-width="4"/><circle cx="34" cy="40" r="4" fill="#3a2a05"/><circle cx="66" cy="40" r="4" fill="#3a2a05"/><path d="M34 70h32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>`), hello:'Mode soutenance : on passe directement à l’épisode interactif. Bonne délibération.' },
+  { id:'guest', name:'Invité·e LinkedIn', note:'Venu·e depuis le post', av: face('#11a37f', smile()), hello:'Bienvenue ! Vous arrivez du post ? Le trou de trois mois est dans « Reprendre ».' },
+];
+let PROFILE = PROFILES[0];
+
+/* ---------- AUDIO ----------
+   Bruitages : Mixkit (licence Sound Effects Free, https://mixkit.co/license/#sfxFree),
+   chargés à la volée depuis leur CDN, jamais redistribués dans ce dépôt.
+   Si le réseau échoue, un bruitage de secours est synthétisé. */
+const SFX_BASE = 'https://assets.mixkit.co/active_storage/sfx/';
+const SFX = { hit:565, boom:498, deep:563, whoosh:1469, swish:1143, drum:546, riser:790, final:2918, bed:1177, glass:677, glitch:679, fanfare:2293 };
+let AC=null, master=null, loading=null, muted=false;
+const BUF={};
+try{ muted = localStorage.getItem('axf_muted')==='1' }catch(e){}
+function ctx(){
+  if(AC) return AC;
+  try{
+    AC = new (window.AudioContext||window.webkitAudioContext)();
+    const comp = AC.createDynamicsCompressor(); comp.threshold.value=-16; comp.knee.value=12; comp.ratio.value=3; comp.attack.value=.004; comp.release.value=.25;
+    master = AC.createGain(); master.gain.value = muted?0:.85;
+    master.connect(comp).connect(AC.destination);
+  }catch(e){ AC=null }
+  return AC;
+}
+function ac(){ const c=ctx(); if(c && c.state==='suspended') c.resume(); return c }
+function loadSfx(){
+  if(loading) return loading; const c=ctx(); if(!c) return (loading=Promise.resolve());
+  loading = Promise.all(Object.entries(SFX).map(async ([k,id])=>{
+    try{ const r=await fetch(`${SFX_BASE}${id}/${id}-preview.mp3`,{mode:'cors'}); if(!r.ok) return;
+      const ab=await r.arrayBuffer(); BUF[k]=await new Promise((res,rej)=>c.decodeAudioData(ab,res,rej)) }catch(e){}
+  }));
+  return loading;
+}
+const live=new Set();
+function play(k,{at=0,vol=1,offset=0,dur=null,fadeIn=.008,fadeOut=.35,rate=1,loop=false,tag=null}={}){
+  const c=ctx(); if(!c||!master) return null;
+  if(!BUF[k]){ synthFallback(k,at,vol); return null }
+  const t=c.currentTime+Math.max(0,at), src=c.createBufferSource(), g=c.createGain();
+  src.buffer=BUF[k]; src.playbackRate.value=rate; src.loop=loop;
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+fadeIn);
+  if(dur){ g.gain.setValueAtTime(vol,t+Math.max(fadeIn,dur-fadeOut)); g.gain.linearRampToValueAtTime(0,t+dur); }
+  src.connect(g).connect(master); src.start(t,offset); if(dur) src.stop(t+dur+.05);
+  const h={tag, stop(f=.35){ try{ const n=c.currentTime; g.gain.cancelScheduledValues(n); g.gain.setValueAtTime(g.gain.value,n); g.gain.linearRampToValueAtTime(0,n+f); src.stop(n+f+.05) }catch(e){} live.delete(h) }};
+  live.add(h); src.onended=()=>live.delete(h);
+  return h;
+}
+function stopTag(tag,f=.35){ [...live].forEach(h=>{ if(h.tag===tag) h.stop(f) }) }
+function synthFallback(k,at,vol){
+  const c=ctx(); if(!c) return; const t=c.currentTime+at;
+  const low = {hit:62,boom:48,deep:52,drum:58,final:42}[k]; if(!low) return;
+  const o=c.createOscillator(), g=c.createGain(); o.type='sine';
+  o.frequency.setValueAtTime(low*2.4,t); o.frequency.exponentialRampToValueAtTime(low,t+.14);
+  g.gain.setValueAtTime(.0001,t); g.gain.exponentialRampToValueAtTime(.7*vol,t+.012); g.gain.exponentialRampToValueAtTime(.0001,t+1.6);
+  o.connect(g).connect(master); o.start(t); o.stop(t+1.7);
+}
+function swell(at=0,dur=2.8,vol=.06){
+  const c=ctx(); if(!c||!master) return; const t=c.currentTime+at;
+  const lp=c.createBiquadFilter(); lp.type='lowpass'; lp.Q.value=.6; lp.frequency.setValueAtTime(180,t); lp.frequency.exponentialRampToValueAtTime(2200,t+dur*.5); lp.frequency.exponentialRampToValueAtTime(400,t+dur);
+  const g=c.createGain(); g.gain.setValueAtTime(.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+dur*.42); g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+  lp.connect(g).connect(master);
+  [[55,0],[110,-5],[110,5],[164.8,-3],[220,4],[277.2,-4],[329.6,3]].forEach(([f,d])=>{ const o=c.createOscillator(); o.type='triangle'; o.frequency.value=f; o.detune.value=d; o.connect(lp); o.start(t); o.stop(t+dur+.05) });
+}
+/* « Ta-dum » maison : deux impacts + nappe qui s'ouvre */
+function tadum(){ play('hit',{vol:.85,dur:1.2}); play('boom',{at:.3,vol:1,dur:3.2,fadeOut:1.2}); swell(.42,2.8,.055) }
+function setMuted(m){ muted=m; try{ localStorage.setItem('axf_muted',m?'1':'0') }catch(e){}
+  if(master&&AC){ const n=AC.currentTime; master.gain.cancelScheduledValues(n); master.gain.setValueAtTime(master.gain.value,n); master.gain.linearRampToValueAtTime(m?0:.85,n+.25) }
+  syncHeroSound(); if(typeof setVol==='function') setVol() }
+const ui = { open:()=>play('whoosh',{vol:.16,dur:1}), pick:()=>play('swish',{vol:.38,dur:2.2,fadeOut:.8}) };
+loadSfx();
+
+/* ---------- UTILS ---------- */
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+let toastT;
+function toast(m){ const t=$('#toast'); t.innerHTML=m; t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),3400) }
+const store = { get(k,d){ try{ const v=localStorage.getItem('axf_'+k); return v?JSON.parse(v):d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem('axf_'+k,JSON.stringify(v)) }catch(e){} } };
+let myList = store.get('list', ['soon','cafe']);
+const ic = {
+  play:'<svg viewBox="0 0 24 24"><path d="M6 4v16l14-8z" fill="#000"/></svg>',
+  plus:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 4v16M4 12h16"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>',
+  like:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M7 10v11H3V10zM7 10l4-8c1.6 0 3 1.2 3 3v3h5.5a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18 21H7"/></svg>',
+  down:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 5l14 14M19 5 5 19"/></svg>',
+  bell:'<svg viewBox="0 0 24 24" fill="#fff"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1Z"/></svg>',
+  info:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 11v6M12 7.5v.5"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>',
+};
+const isTouch = matchMedia('(hover:none)').matches;
+
+/* ---------- INTRO ---------- */
+(function intro(){
+  const el=$('#intro'), rib=el.querySelector('.ribbons');
+  const cols=['#e50914','#b1060f','#ff3d47','#7a0208','#e50914','#ff6a72','#b1060f','#e50914','#5c0105','#ff2a35','#e50914','#9d050d','#e50914','#ff4d57','#b1060f'];
+  rib.innerHTML=cols.map((c,i)=>`<i style="background:${c};animation-delay:${(Math.abs(i-7)*0.05).toFixed(2)}s"></i>`).join('');
+  let done=false;
+  const finish=()=>{ if(done) return; done=true; showProfiles(); el.style.transition='opacity .45s ease'; el.style.opacity=0; setTimeout(()=>el.remove(),460) };
+  const start=async()=>{ if(el.dataset.go) return; el.dataset.go=1; $('#introTap').textContent='…'; ac();
+    await Promise.race([loadSfx(), new Promise(r=>setTimeout(r,1500))]);
+    $('#introTap').remove(); requestAnimationFrame(()=>{ el.classList.add('play'); tadum(); setTimeout(finish,2850) }) };
+  el.addEventListener('click',e=>{ if(e.target.id==='skipIntro'){ finish(); return } if(!el.classList.contains('play')) start() },{once:false});
+  $('#skipIntro').addEventListener('click',e=>{e.stopPropagation(); finish()});
+  if(store.get('seen',false)){ $('#introTap').textContent='Touchez pour lancer ▶ (ou passez l’intro, on ne juge pas)' }
+})();
+
+function showProfiles(){
+  const p=$('#profiles'); p.classList.remove('hidden');
+  $('#plist').innerHTML=PROFILES.map(x=>`<button class="prof" data-p="${x.id}"><span class="av">${x.av}</span><b>${x.name}</b><small>${x.note}</small></button>`).join('');
+  $$('.prof').forEach(b=>b.addEventListener('click',()=>pickProfile(b.dataset.p)));
+}
+$('#manage').addEventListener('click',()=>toast('Gestion des profils indisponible : les profils sont validés en comité. Délai de réponse estimé : trois semaines.'));
+
+function pickProfile(id){
+  PROFILE=PROFILES.find(p=>p.id===id); store.set('seen',true); ac();
+  const av=PROFILE.av;
+  $('#meAv').innerHTML = IMG.avatar ? `<img src="${IMG.avatar}" alt="" style="width:100%;height:100%;object-fit:cover">` : av;
+  $('#profiles').classList.add('hidden');
+  $('#app').classList.remove('hidden'); renderRows();
+  window.scrollTo(0,0);
+  ac(); ui.pick();
+  if(id==='ats'){ openATS(); return }
+  if(PROFILE.hello) setTimeout(()=>toast(PROFILE.hello),400);
+  if(id==='mgr') setTimeout(()=>openModal('main',{tldr:true}),700);
+  if(id==='nobel') setTimeout(()=>openBander(),900);
+  armIdle();
+}
+
+/* ---------- RENDU PRINCIPAL ---------- */
+function heroArt(){
+  const h=$('#heroArt');
+  if(IMG.hero){ h.innerHTML=`<img src="${IMG.hero}" alt="">`; return }
+  h.innerHTML=`<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="h1" cx=".72" cy=".38" r=".55"><stop offset="0" stop-color="#5b0b10"/><stop offset=".55" stop-color="#1a0507"/><stop offset="1" stop-color="#050505"/></radialGradient>
+      <radialGradient id="h2" cx=".9" cy=".1" r=".5"><stop offset="0" stop-color="#1fb7c1" stop-opacity=".35"/><stop offset="1" stop-color="#1fb7c1" stop-opacity="0"/></radialGradient>
+      <radialGradient id="bk1"><stop offset="0" stop-color="#ff3b45" stop-opacity=".5"/><stop offset="1" stop-color="#ff3b45" stop-opacity="0"/></radialGradient><radialGradient id="bk2"><stop offset="0" stop-color="#3fe0ea" stop-opacity=".45"/><stop offset="1" stop-color="#3fe0ea" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1600" height="900" fill="url(#h1)"/><rect width="1600" height="900" fill="url(#h2)"/>
+    <g>${Array.from({length:22},(_,i)=>`<circle cx="${700+((i*233)%900)}" cy="${80+((i*137)%560)}" r="${30+(i*7)%50}" fill="url(#${i%4?'bk1':'bk2'})" opacity="${.35+((i*13)%10)/20}"/>`).join('')}</g>
+    <g stroke="#ff4b55" stroke-width="1.6" fill="none" opacity=".5"><path d="M820 640 980 380 1160 520 1330 260 1520 430M980 380 1080 700 1160 520M1330 260 1420 660 1520 430M1080 700 1420 660"/></g>
+    <g>${[[820,640,8],[980,380,12],[1160,520,16],[1330,260,11],[1520,430,9],[1080,700,7],[1420,660,9]].map(([x,y,r],i)=>`<circle cx="${x}" cy="${y}" r="${r*3}" fill="${i%3?'#e50914':'#2fd3dd'}" opacity=".15"/><circle cx="${x}" cy="${y}" r="${r}" fill="${i%3?'#ff3b45':'#7af5fb'}"/>`).join('')}</g>
+    <g font-family="Space Mono" font-size="17" fill="#ff8a90" opacity=".38">
+      <text x="1010" y="360">cadrage</text><text x="1190" y="540">recette</text><text x="1350" y="240">n8n</text><text x="1100" y="730">déploiement</text><text x="1440" y="690">reporting</text><text x="840" y="670">kick-off</text><text x="1540" y="415">café</text>
+    </g>
+    <rect y="0" width="1600" height="900" fill="url(#h1)" opacity=".2"/>
+  </svg>`;
+}
+function mobPoster(){
+  const s=SHOWS.main;
+  $('#mobPoster').innerHTML=`<div class="pv">${IMG.heroMobile?`<div class="poster"><img class="photo" src="${IMG.heroMobile}" alt=""><div class="vig"></div></div>`:poster({...s,title:''},{})}
+    <div class="mi"><div class="series" style="justify-content:center;display:flex;gap:6px;font-size:11px;letter-spacing:.3em;font-weight:700"><span style="font-family:'Bebas Neue';color:#e50914;font-size:22px;line-height:.7">A</span>SÉRIE</div>
+    <div class="titleart">Chef de projet</div>
+    <div class="genres"><span>Gestion de projet</span><span>IA</span><span>Comédie de bureau</span></div>
+    <div class="btns"><button class="btn w" data-play="trailer">${ic.play.replace('<svg','<svg style="width:1.3em"')}Lecture</button><button class="btn g" data-open="main">${ic.info}Infos</button></div></div></div>`;
+}
+function card(id, opt={}){
+  const s=SHOWS[id]; const prog = opt.cw && s.progress!=null ? `<span class="prog"><i style="width:${s.progress}%"></i></span>` : '';
+  return `<div class="card${opt.cw?' cw':''}" tabindex="0" data-id="${id}">${poster(s,{ribbon:opt.ribbon||null, top10:opt.top10})}${prog}</div>`;
+}
+function rowHTML(id, title, items, {cw=false, explore=''}={}){
+  return `<section class="row" id="${id}"><h2>${title}${explore?`<span class="exp">${explore} ›</span>`:''}</h2>
+    <div class="pips"></div>
+    <button class="arrow l" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="m15 5-7 7 7 7"/></svg></button>
+    <div class="track">${items.map(x=>typeof x==='string'?card(x,{cw}):card(x.id,{...x,cw})).join('')}</div>
+    <button class="arrow r" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="m9 5 7 7-7 7"/></svg></button></section>`;
+}
+function top10HTML(){
+  return `<section class="row" id="r-top10"><h2>Top 10 des compétences en Normandie aujourd'hui</h2><div class="pips"></div>
+    <button class="arrow l" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="m15 5-7 7 7 7"/></svg></button>
+    <div class="track">${SKILLS.map(([t,d,art],i)=>{
+      const s={id:'sk'+i,title:t,art,font:{fam:SKILL_FONTS[i%4],p:'clamp(13px,1.45vw,23px)',css:i%4===2?'letter-spacing:.06em':i%4===0?'text-transform:uppercase':''}};
+      return `<div class="t10card" tabindex="0" data-skill="${i}"><span class="num">${i+1}</span><div class="pst">${poster(s,{portrait:true, ribbon:i===1?'Nouveauté':null})}</div></div>`}).join('')}</div>
+    <button class="arrow r" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="m9 5 7 7-7 7"/></svg></button></section>`;
+}
+function renderRows(){
+  const pname = PROFILE.name;
+  $('#rows').innerHTML = [
+    rowHTML('r-cw', `Reprendre avec le profil de ${pname}`, ['trou','cristal','funnel','train','main'], {cw:true}),
+    rowHTML('r-saisons','Les saisons d’Alexis',[{id:'rh'},{id:'b2b'},{id:'archi',ribbon:'Le plus regardé'},{id:'allo',ribbon:'Dernière saison'},{id:'soon',ribbon:'Prochainement'}],{explore:'Tout explorer'}),
+    top10HTML(),
+    rowHTML('r-docs','Documentaires : ses posts LinkedIn',['cadre','regles','agents','bureau'],{explore:'Voir sur LinkedIn'}),
+    rowHTML('r-inter','Parce que vous recrutez',[{id:'bander',ribbon:'Épisode interactif'},'ats','cafe','main','archi']),
+    rowHTML('r-spin','Spin-offs & bénévolat',['sentinel','conseil','psy','diplomes','b2b']),
+    rowHTML('r-soon','Prochainement',[{id:'soon',ribbon:'Dès votre appel'},{id:'cafe',ribbon:'Inédit'}]),
+    rowHTML('r-list','Ma liste', myList.length?myList:['soon']),
+  ].join('');
+  wireRows();
+}
+function wireRows(){
+  const ex=document.querySelector('#r-docs .exp'); if(ex){ ex.style.cursor='pointer'; ex.onclick=()=>window.open(LI_ACTIVITY,'_blank','noopener') }
+  $$('.row').forEach(r=>{
+    const tr=r.querySelector('.track'), pips=r.querySelector('.pips');
+    const upd=()=>{ const pages=Math.max(1,Math.ceil(tr.scrollWidth/tr.clientWidth)), cur=Math.round(tr.scrollLeft/tr.clientWidth); pips.innerHTML=pages>1?Array.from({length:pages},(_,i)=>`<i class="${i===cur?'on':''}"></i>`).join(''):'';
+      r.querySelector('.arrow.l').style.display = tr.scrollLeft>5?'':'none'; r.querySelector('.arrow.r').style.display = tr.scrollLeft+tr.clientWidth<tr.scrollWidth-5?'':'none' };
+    r.querySelector('.arrow.l').onclick=()=>tr.scrollBy({left:-tr.clientWidth*.9,behavior:'smooth'});
+    r.querySelector('.arrow.r').onclick=()=>tr.scrollBy({left:tr.clientWidth*.9,behavior:'smooth'});
+    tr.addEventListener('scroll',()=>{hidePreview(); upd()},{passive:true}); upd(); addEventListener('resize',upd);
+  });
+  $$('.card').forEach(c=>{
+    c.addEventListener('click',()=>openFrom(c.dataset.id));
+    c.addEventListener('keydown',e=>{ if(e.key==='Enter') openFrom(c.dataset.id) });
+    if(!isTouch){ c.addEventListener('mouseenter',()=>schedulePreview(c)); c.addEventListener('mouseleave',()=>{ clearTimeout(pvT); pvLeaveT=setTimeout(hidePreview,120) }) }
+  });
+  $$('.t10card').forEach(c=>{ const fn=()=>openSkill(+c.dataset.skill); c.addEventListener('click',fn); c.addEventListener('keydown',e=>{if(e.key==='Enter')fn()}) });
+}
+function openFrom(id){ if(id==='ats') return openATS(); if(id==='bander') return openBander(); openModal(id) }
+
+/* ---------- APERÇU AU SURVOL ---------- */
+let pvT, pvLeaveT, pvCard=null;
+const pv=$('#preview');
+pv.addEventListener('mouseenter',()=>clearTimeout(pvLeaveT));
+pv.addEventListener('mouseleave',()=>hidePreview());
+function schedulePreview(c){ clearTimeout(pvT); clearTimeout(pvLeaveT); pvT=setTimeout(()=>showPreview(c),480) }
+function showPreview(c){
+  const s=SHOWS[c.dataset.id], r=c.getBoundingClientRect(); pvCard=c;
+  const w=r.width*1.5, vw=document.documentElement.clientWidth;
+  let left=r.left+window.scrollX-(w-r.width)/2; left=Math.max(12,Math.min(left,vw-w-12));
+  const top=r.top+window.scrollY-r.height*.25;
+  pv.classList.remove('show'); pv.style.transition='none';
+  pv.style.width=w+'px'; pv.style.left=left+'px'; pv.style.top=top+'px';
+  pv.style.transformOrigin=`${r.left+window.scrollX+r.width/2-left}px ${r.top+window.scrollY+r.height/2-top}px`;
+  const inList=myList.includes(s.id);
+  pv.innerHTML=`<div class="pv">${poster(s)}</div><div class="pi">
+    <div class="act"><button class="roundbtn play" data-a="play" aria-label="Lecture">${ic.play}</button>
+    <button class="roundbtn" data-a="list" aria-label="Ma liste">${inList?ic.check:ic.plus}</button>
+    <button class="roundbtn" data-a="like" aria-label="J'aime">${ic.like}</button>
+    <button class="roundbtn more" data-a="more" aria-label="Plus d'infos">${ic.down}</button></div>
+    <div class="meta"><span class="match">${s.match} % pour vous</span><span class="age">${s.age}</span><span>${s.len}</span><span class="hd">HD</span></div>
+    <div class="genres">${s.genres.map(x=>`<span>${x}</span>`).join('')}</div></div>`;
+  pv.querySelectorAll('[data-a]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); const a=b.dataset.a;
+    if(a==='more'){ hidePreview(); openFrom(s.id) }
+    if(a==='play'){ hidePreview(); playFor(s.id) }
+    if(a==='list'){ toggleList(s.id); b.innerHTML=myList.includes(s.id)?ic.check:ic.plus }
+    if(a==='like'){ like() } });
+  pv.onclick=()=>{ hidePreview(); openFrom(s.id) };
+  void pv.offsetWidth; pv.style.transition=''; requestAnimationFrame(()=>pv.classList.add('show'));
+}
+function hidePreview(){ pv.classList.remove('show'); pvCard=null }
+const LI_ACTIVITY='https://www.linkedin.com/in/alexis-druaux/recent-activity/all/';
+function playFor(id){ if(SHOWS[id]&&SHOWS[id].doc){ window.open(LI_ACTIVITY,'_blank','noopener'); return } if(id==='bander'||id==='trou'||id==='cristal') return openBander(); if(id==='ats') return openATS(); if(id==='cafe'||id==='soon') { openContact(); return } openPlayer() }
+function toggleList(id){
+  const i=myList.indexOf(id); if(i>-1){ myList.splice(i,1); toast('Retiré de Ma liste.') } else { myList.push(id); toast(`Ajouté à Ma liste. Astuce : la short-list fonctionne aussi très bien.`) }
+  store.set('list',myList); const tr=document.querySelector('#r-list .track'); if(tr){ tr.innerHTML=(myList.length?myList:['soon']).map(x=>card(x)).join(''); wireRows() }
+}
+const LIKES=['Noté. L’algorithme vous recommandera plus de chefs de projet.','J’adore ! Alexis aussi. Prochaine étape : un café ?','Merci ! Ce pouce vaut plus qu’un mail automatique.'];
+let likeN=0; function like(){ toast('👍 '+LIKES[likeN++%LIKES.length]) }
+
+/* ---------- MODALE ---------- */
+function epHTML(eps, art){
+  return eps.map((e,i)=>`<div class="ep"><span class="no">${i+1}</span><div class="th">${poster({id:'e',title:'',art})}</div>
+    <div class="bd"><div class="top">${e[0]}<span>${e[1]}</span></div><p>${e[2]}</p>${e[3]?`<span class="kpi">▲ ${e[3]}</span>`:''}</div></div>`).join('');
+}
+function openModal(id, {season=null, tldr=false}={}){
+  const s=SHOWS[id]; if(!s) return; hidePreview();
+  const isMain = id==='main', seasonNo = season || s.season || 1;
+  const inList=myList.includes(id);
+  let eps='';
+  if(isMain || s.season){
+    const opts=SEASONS.map(x=>`<option value="${x.n}"${x.n===seasonNo?' selected':''}>Saison ${x.n}</option>`).join('');
+    eps=`<div class="eph"><h3>Épisodes</h3><select class="season" id="seasonSel" aria-label="Saison">${opts}</select></div><div id="seasonMeta" style="color:#aaa;font-size:14px;margin:-4px 0 12px"></div><div id="epList"></div>`;
+  } else if(s.eps){
+    eps=`<div class="eph"><h3>Épisodes</h3><span style="color:#aaa">${s.len}</span></div>${epHTML(s.eps,s.art)}`;
+  }
+  const tl = tldr ? `<div style="background:#2a2a2a;border-left:3px solid #e50914;padding:16px 18px;margin-top:18px;border-radius:3px">
+      <div style="font-weight:800;letter-spacing:.15em;font-size:12px;color:#e50914;margin-bottom:8px">RÉSUMÉ EN 30 SECONDES</div>
+      <ul style="padding-left:18px;line-height:1.7;font-size:15px">
+        <li><b>Chef de projet IT & transformation digitale</b>, 5 ans d'expérience, Scrum et Kanban</li>
+        <li>5 à 10 projets TPE/PME pilotés de bout en bout : cadrage → recette → déploiement</li>
+        <li>IA & automatisation (OpenAI, Anthropic, n8n) : jusqu'à <b>10 h/semaine</b> économisées</li>
+        <li>A recruté <b>120+ personnes</b> chez Randstad : connaît les deux côtés du bureau</li>
+        <li>Disponible <b>immédiatement</b> · Rouen, Mont-Saint-Aignan, Paris, télétravail</li>
+      </ul></div>` : '';
+  const syn = s.syn;
+  const similar = (isMain?['archi','cadre','rh','allo','bander','soon']:s.doc?['cadre','regles','agents','bureau','archi','main']:['main','archi','cadre','bander','cafe','soon']).filter(x=>x!==id).slice(0,6);
+  $('#mbox').innerHTML=`<div class="mh">${isMain?`<div class="poster">${$('#heroArt').innerHTML}<div class="vig"></div></div>`:poster({...s,title:''})}<div class="fade"></div>
+      <button class="close" id="mclose" aria-label="Fermer">${ic.x}</button>
+      <div class="over"><div class="series" style="display:flex;gap:8px;align-items:center;font-size:12px;letter-spacing:.3em;font-weight:700;margin-bottom:8px"><span style="font-family:'Bebas Neue';color:#e50914;font-size:26px;line-height:.7">A</span>${(s.kind||'').toUpperCase()}</div>
+      <div class="mtitle" style="font-family:${s.font?.fam||"'Anton'"};font-size:clamp(30px,5.4vw,60px);line-height:.95;${s.font?.css||''};text-shadow:0 3px 14px rgba(0,0,0,.6)">${s.title}</div>
+      <div class="btns" style="margin-top:0;align-items:center">
+        <button class="btn w" id="mplay">${ic.play.replace('<svg','<svg style="width:1.4em"')}${id==='cafe'||id==='soon'?'Me le rappeler':id==='bander'?'Jouer':s.doc?'Lire sur LinkedIn':'Lecture'}</button>
+        <button class="roundbtn" id="mlist" style="width:42px;border-width:2px" aria-label="Ma liste">${inList?ic.check:ic.plus}</button>
+        <button class="roundbtn" id="mlike" style="width:42px;border-width:2px" aria-label="J'aime">${ic.like}</button>
+      </div></div></div>
+    <div class="mb">
+      <div class="mgrid"><div class="l"><div class="meta"><span class="match">${s.match} % pour vous</span><span>${s.year}</span><span>${s.len}</span><span class="hd">HD</span><span class="hd">AD</span></div>
+        <div class="meta" style="margin-top:8px"><span class="age">${s.age}</span><span style="font-size:13px">${isMain?'humour pince-sans-rire, KPI, métaphores ferroviaires':s.genres.join(', ').toLowerCase()}</span></div>
+        ${isMain?`<div class="top10badge" style="font-size:18px;margin:14px 0 0"><span class="t10" style="width:28px"><small>TOP</small><span>10</span></span>N° 1 en Normandie aujourd'hui</div>`:''}
+        ${tl}<p>${syn}</p></div>
+      <div class="r"><div>Distribution : <b>${s.cast||'Alexis Druaux'}</b></div><div>Genres : <b>${s.genres.join(', ')}</b></div><div>Ce programme est : <b>${s.mood||'Concret, humain, mesurable'}</b></div></div></div>
+      ${eps}
+      <h3 style="font-size:22px;margin-top:44px">Titres similaires</h3>
+      <div class="more-grid">${similar.map(x=>{const t=SHOWS[x];return `<div class="mcard" data-id="${x}"><div class="pv">${poster(t)}</div><div class="ci"><div class="meta"><span class="match">${t.match} %</span><span class="age">${t.age}</span><span>${t.year}</span></div>${t.syn.length>120?t.syn.slice(0,118)+'…':t.syn}</div></div>`}).join('')}</div>
+      <div class="about"><h3>À propos de <b style="color:#fff;font-weight:700">${s.title.replace(/<br>/g,' ')}</b></h3>
+        <div>Créateur : <b>Alexis Druaux</b></div><div>Contact : <b><a href="${CAFE}" style="text-decoration:underline">${MAIL}</a> · <a href="#cafe">06 45 47 12 92</a> · <a href="https://www.linkedin.com/in/alexis-druaux" target="_blank" rel="noopener" style="text-decoration:underline">LinkedIn</a></b></div>
+        <div>Lieux de tournage : <b>Rouen, Mont-Saint-Aignan, Paris (ligne Saint-Lazare), télétravail</b></div>
+        <div>Langues audio : <b>Français (langue maternelle), Anglais (B2, usage professionnel), Espagnol (notions)</b></div>
+        <div>Sous-titres : <b>Psychologie, veille tech et scientifique, création de contenu, sport, voyages</b></div>
+        <div>Bonus : <b><a href="Alexis_Druaux_CV_Chef_de_projet.pdf" target="_blank" rel="noopener" style="text-decoration:underline">CV PDF</a> · <a href="#" data-ats style="text-decoration:underline">version ATS</a></b></div>
+      </div>
+    </div>`;
+  const m=$('#modal'); const wasOpen=!m.classList.contains('hidden'); m.classList.remove('hidden'); document.body.style.overflow='hidden'; m.scrollTop=0; if(!wasOpen) ui.open();
+  requestAnimationFrame(()=>m.classList.add('show'));
+  const sel=$('#seasonSel');
+  if(sel){ const draw=()=>{ const S=SEASONS[sel.value-1]; $('#seasonMeta').innerHTML=`<b style="color:#fff">${S.label}</b> · ${S.org} · ${S.period}`; $('#epList').innerHTML=epHTML(S.eps,S.art) }; sel.onchange=draw; draw() }
+  $('#mclose').onclick=closeModal;
+  $('#mplay').onclick=()=>{ if(id==='cafe'||id==='soon'){ toast('🔔 Rappel enregistré. Le plus rapide reste encore un café.'); setTimeout(openContact,700); return } closeModal(); playFor(id) };
+  $('#mlist').onclick=e=>{ toggleList(id); e.currentTarget.innerHTML=myList.includes(id)?ic.check:ic.plus };
+  $('#mlike').onclick=like;
+  $$('#mbox .mcard').forEach(c=>c.onclick=()=>openFrom(c.dataset.id));
+  $$('#mbox [data-ats]').forEach(a=>a.onclick=e=>{e.preventDefault(); closeModal(); openATS()});
+}
+function closeModal(){ const m=$('#modal'); m.classList.remove('show'); setTimeout(()=>{m.classList.add('hidden'); document.body.style.overflow=''},250) }
+$('#modal').addEventListener('click',e=>{ if(e.target.id==='modal') closeModal() });
+function openSkill(i){
+  const [t,d,art]=SKILLS[i];
+  const links={0:'archi',1:'archi',2:'allo',3:'archi',4:'archi',5:'allo',6:'b2b',7:'sentinel',8:'sentinel',9:'train'};
+  SHOWS['skill']={ id:'skill', title:t, art, kind:`N° ${i+1} du Top 10`, match:99-i, year:'2021–2026', len:'Compétence', age:'Tous publics', font:{fam:SKILL_FONTS[i%4]}, genres:['Compétence','Top 10'], syn:d+(i===9?' Aucune compétence n’a été autant testée en conditions réelles.':' À voir en situation dans la série associée.'), cast:'Alexis Druaux', mood:'Démontrable en entretien' };
+  openModal('skill');
+  const g=document.querySelector('#mbox .more-grid'); const x=links[i]; const sx=SHOWS[x];
+  g.insertAdjacentHTML('afterbegin',`<div class="mcard" data-id="${x}" style="outline:2px solid #e50914"><div class="pv">${poster(sx)}</div><div class="ci"><b style="color:#fff">À voir en action dans : ${sx.kind}</b><br>${sx.syn.slice(0,100)}…</div></div>`);
+  g.firstElementChild.onclick=()=>openFrom(x);
+}
+
+/* ---------- LECTEUR : BANDE-ANNONCE ---------- */
+const TRAILER = [
+  {d:3, t:'<div class="small">ALEXISFLIX PRÉSENTE</div>', fx:'reseau', sfx:['deep',.55]},
+  {d:3.4, t:'<div class="big">Il a recruté plus de 120 personnes.</div>', fx:'rh', sfx:['drum',.7]},
+  {d:3.6, t:'<div class="big">Il a lu des centaines de CV<br>« autonomes, polyvalents, résistants au stress ».</div>', fx:'rh', sub:'Même les candidats finissaient par écrire comme des appareils électroménagers.'},
+  {d:3, t:'<div class="big">Puis il est passé<br>de l’autre côté du bureau.</div>', fx:'b2b', sfx:['swish',.55]},
+  {d:3.2, t:'<div class="quote">« Ah. Vous avez pris<br>des vacances, quoi. »</div><div class="who">UN RECRUTEUR, À PROPOS D’UN TROU DE TROIS MOIS</div>', fx:'trou', sfx:['glass',.4]},
+  {d:3.2, t:'<div class="quote">« Vous êtes trop qualifié.<br>Vous allez vous ennuyer. »</div><div class="who">UNE BOULE DE CRISTAL</div>', fx:'cristal', sfx:['glass',.4]},
+  {d:3.2, t:'<div class="quote">« Tout est centralisé.<br>Postulez en ligne. »</div><div class="who">UNE PORTE EN BOIS MASSIF</div>', fx:'b2b', sfx:['hit',.5]},
+  {d:3.2, t:'<div class="big">Il a piloté 5 à 10 projets<br>de bout en bout.</div>', fx:'archi', sfx:['drum',.75]},
+  {d:3.2, t:'<div class="big">Il a rendu jusqu’à 10 heures<br>par semaine aux équipes.</div>', fx:'archi', sub:'API OpenAI, Anthropic, n8n.', sfx:['swish',.5]},
+  {d:3.2, t:'<div class="big">Il a affronté<br>la ligne Rouen – Saint-Lazare.</div>', fx:'train', sub:'Gestion des risques : niveau expert.', sfx:['deep',.6]},
+  {d:3, t:'<div class="small">CET AUTOMNE</div><div class="big" style="margin-top:14px">Une seule question.</div>', fx:'next', sfx:['riser',.7,.4]},
+  {d:3, t:'<div class="quote" style="font-style:normal;font-weight:900">On se rencontre&nbsp;?</div>', fx:'cafe', sfx:['boom',.8]},
+  {d:5, hold:true, t:`<div style="font-family:'Anton';font-size:clamp(54px,9vw,140px);line-height:.85;text-transform:uppercase">Chef de projet</div><div style="font-family:'Playfair Display';font-style:italic;font-size:clamp(18px,2.4vw,32px);margin-top:12px">avec Alexis Druaux</div><div class="small" style="margin-top:26px;letter-spacing:.3em">DISPONIBLE IMMÉDIATEMENT · ROUEN · MONT-SAINT-AIGNAN · PARIS</div>`, fx:'reseau', sfx:['final',1,2.05], swell:1},
+];
+const TTOTAL = TRAILER.reduce((a,b)=>a+b.d,0);
+let P={t:0,playing:false,raf:0,last:0,idx:-1,uiT:0};
+function fmt(s){ s=Math.max(0,Math.round(s)); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0') }
+function openPlayer(){
+  hidePreview(); const el=$('#player'); el.classList.remove('hidden'); document.body.style.overflow='hidden';
+  el.innerHTML=`<div class="bgfx" id="pfx"></div><div class="stage bars"><div class="card-t" id="pcard"></div></div><div class="sub" id="psub"></div>
+    <button class="skipintro" id="pskip">Passer l'intro</button>
+    <div class="pui"><button class="back" id="pback" aria-label="Retour"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+      <div class="bottom"><div class="pbar"><div class="bar" id="pbar"><i id="pfill"></i><b id="pknob"></b></div><span class="time" id="ptime"></span></div>
+      <div class="pctl"><button id="ppp" aria-label="Lecture/Pause"></button>
+        <button id="prew" aria-label="Reculer de 10 s"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/><text x="12" y="15.5" font-size="7" text-anchor="middle" fill="#fff" stroke="none" font-family="Inter" font-weight="700">10</text></svg></button>
+        <button id="pfwd" aria-label="Avancer de 10 s"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-2.4-5.7M20 4v4h-4"/><text x="12" y="15.5" font-size="7" text-anchor="middle" fill="#fff" stroke="none" font-family="Inter" font-weight="700">10</text></svg></button>
+        <button id="pvol" aria-label="Son"></button>
+        <div class="ptitle"><b>Chef de projet</b>Bande-annonce officielle</div>
+        <button id="pinter" aria-label="Épisode interactif" title="Épisode interactif"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 3v6a4 4 0 0 0 4 4h4a4 4 0 0 1 4 4v4M18 3v6M6 21v-4"/></svg></button>
+        <button id="pfs" aria-label="Plein écran"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div></div></div>`;
+  ac(); P.t=0; P.idx=-1; P.playing=true; P.last=performance.now(); bedOn(); setPP(); setVol();
+  const bump=()=>{ el.classList.add('ui'); clearTimeout(P.uiT); P.uiT=setTimeout(()=>{ if(P.playing) el.classList.remove('ui') },2600) };
+  el.onmousemove=bump; el.ontouchstart=bump; bump();
+  $('#pback').onclick=closePlayer; $('#ppp').onclick=()=>{ P.playing=!P.playing; P.last=performance.now(); setPP(); if(P.playing){ bedOn(); P.idx=-1 } else { bedOff(); stopTag('tr',.2) } };
+  $('#prew').onclick=()=>seek(P.t-10); $('#pfwd').onclick=()=>seek(P.t+10);
+  $('#pvol').onclick=()=>setMuted(!muted);
+  $('#pskip').onclick=()=>seek(TRAILER.slice(0,3).reduce((a,b)=>a+b.d,0));
+  $('#pinter').onclick=()=>{ closePlayer(); openBander() };
+  $('#pfs').onclick=()=>{ try{ const r=document.fullscreenElement?document.exitFullscreen():el.requestFullscreen(); r&&r.catch&&r.catch(()=>toast('Plein écran indisponible ici.')) }catch(e){} };
+  $('#pbar').onclick=e=>{ const r=e.currentTarget.getBoundingClientRect(); seek((e.clientX-r.left)/r.width*TTOTAL) };
+  document.addEventListener('keydown',pkey);
+  cancelAnimationFrame(P.raf); P.raf=requestAnimationFrame(tick);
+}
+function pkey(e){ if($('#player').classList.contains('hidden')) return; if(e.key===' '){ e.preventDefault(); $('#ppp').click() } if(e.key==='Escape') closePlayer(); if(e.key==='ArrowRight') seek(P.t+10); if(e.key==='ArrowLeft') seek(P.t-10) }
+function setPP(){ $('#ppp').innerHTML = P.playing ? '<svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>' : '<svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4v16l14-8z"/></svg>'; if(!P.playing) $('#player').classList.add('ui') }
+function setVol(){ const b=$('#pvol'); if(b) b.innerHTML = muted ? '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9z" fill="#fff"/><path d="m17 9 4 6m0-6-4 6"/></svg>' : '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9z" fill="#fff"/><path d="M16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14"/></svg>' }
+function seek(t){ P.t=Math.max(0,Math.min(TTOTAL-.01,t)); P.idx=-1; stopTag('tr',.15) }
+function bedOn(){ if(!live.size || ![...live].some(h=>h.tag==='bed')) play('bed',{vol:.2,loop:true,fadeIn:1.6,offset:3,tag:'bed'}) }
+function bedOff(){ stopTag('bed',.8) }
+function tick(now){
+  const el=$('#player'); if(el.classList.contains('hidden')) return;
+  if(P.playing){ P.t+= (now-P.last)/1000 } P.last=now;
+  if(P.playing && P.t>=TTOTAL){ P.t=TTOTAL; P.playing=false; setPP(); bedOff(); showEndOfTrailer(); }
+  let acc=0, i=0; for(;i<TRAILER.length;i++){ if(P.t<acc+TRAILER[i].d) break; acc+=TRAILER[i].d } i=Math.min(i,TRAILER.length-1);
+  if(i!==P.idx){ P.idx=i; const c=TRAILER[i], pc=$('#pcard');
+    pc.className='card-t'; void pc.offsetWidth; pc.innerHTML=c.t; pc.classList.add(c.hold?'hold':'anim'); pc.style.animationDuration=c.d+'s';
+    $('#psub').textContent=c.sub||'';
+    $('#pfx').innerHTML=`<div class="poster" style="animation:kb ${c.d*3}s linear both">${poster({id:'x',title:'',art:c.fx})}</div>`;
+    $('#pskip').style.display = i<3 ? '' : 'none';
+    const into = P.t-acc;
+    if(P.playing && c.sfx && into<.25){ const [k,v,off=0]=c.sfx; play(k,{vol:v,offset:off,dur:Math.max(1.2,c.d+.6),fadeOut:.6,tag:'tr'}); if(c.swell) swell(.15,3.4,.05) } }
+  $('#pfill').style.width=(P.t/TTOTAL*100)+'%'; $('#pknob').style.left=(P.t/TTOTAL*100)+'%'; $('#ptime').textContent=fmt(TTOTAL-P.t);
+  P.raf=requestAnimationFrame(tick);
+}
+function showEndOfTrailer(){
+  if($('#pend')) return;
+  $('#player').insertAdjacentHTML('beforeend',`<div id="pend" style="position:absolute;inset:0;z-index:12;background:rgba(0,0,0,.82);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px">
+    <div style="letter-spacing:.3em;font-size:12px;color:#aaa;font-weight:700">LA SUITE ?</div>
+    <div style="font-family:'Anton';font-size:clamp(32px,5vw,64px);text-transform:uppercase">À vous de jouer</div>
+    <div class="btns" style="justify-content:center"><a class="btn w" href="${CAFE}">${ic.mail.replace('stroke="#fff"','stroke="#000"')}Proposer un café</a><button class="btn g" id="pendI">Épisode interactif</button><button class="btn g" id="pendR">Revoir</button></div>
+    <button id="pendC" style="color:#aaa;margin-top:8px;text-decoration:underline">Retour au catalogue</button></div>`);
+  $('#pendI').onclick=()=>{ closePlayer(); openBander() };
+  $('#pendR').onclick=()=>{ $('#pend').remove(); seek(0); P.playing=true; P.last=performance.now(); setPP(); bedOn() };
+  $('#pendC').onclick=closePlayer;
+}
+function closePlayer(){ const el=$('#player'); P.playing=false; bedOff(); stopTag('tr',.3); cancelAnimationFrame(P.raf); el.classList.add('hidden'); el.innerHTML=''; document.body.style.overflow=''; document.removeEventListener('keydown',pkey); try{ if(document.fullscreenElement) document.exitFullscreen() }catch(e){} }
+
+/* ---------- ÉPISODE INTERACTIF ---------- */
+const SCENES = [
+  { act:'SCÈNE 1 · LE TROU', fx:'trou', line:'Vous repérez un trou de trois mois dans le parcours d’Alexis.', ctx:'Un silence s’installe dans la salle de réunion.',
+    a:['« Ah. Vous avez pris des vacances, quoi. »','Le silence. On imagine presque le jardin de l’entreprise… et le trou déjà creusé. Le candidat cherche son bracelet all inclusive. Il n’y en a jamais eu.'],
+    b:['« Racontez-moi ces trois mois. »','Une période assumée, des obstacles, et un processus de recrutement qui a duré deux mois. Il garde la fin pour le café. Vous voulez déjà la connaître.'] },
+  { act:'SCÈNE 2 · LA BOULE DE CRISTAL', fx:'cristal', line:'Il postule comme conseiller clientèle. Un métier qu’il aime, et par lequel il a commencé.', ctx:'Votre détecteur d’ennui futur se met à clignoter.',
+    a:['« Vous êtes trop qualifié. Vous allez vous ennuyer. »','Candidat arrêté en plein vol pour un bâillement futur. Il cherche la caméra cachée. Il n’y en a pas.'],
+    b:['« Qu’est-ce qui vous plaît dans ce métier ? »','Il vous répond franchement. Vous apprenez ce qu’il aime mobiliser et où il veut progresser. Ennui prévu : 0 %. Boule de cristal rangée.'] },
+  { act:'SCÈNE 3 · LA PORTE', fx:'b2b', line:'Costume de commercial, CV sous le bras, il frappe à votre porte à Mont-Saint-Aignan.', ctx:'Il s’intéresse à votre activité et à vos besoins.',
+    a:['« Tout est centralisé. Postulez en ligne. »','Backlink en bois massif : redirection 301 effectuée. La porte vient de faire du SEO.'],
+    b:['« Entrez, on a cinq minutes. »','Cinq minutes plus tard, vous savez sur quel projet il pourrait vous faire gagner du temps. La vieille technologie « parler aux gens » fonctionne toujours.'] },
+  { act:'SCÈNE 4 · LE DEUXIÈME ENTRETIEN', fx:'conseil', line:'Il est retenu pour un deuxième entretien.', ctx:'Comment l’organisez-vous ?',
+    a:['Convoquer le N+2, le N+3 et le N+4 au siège','Une soutenance de thèse pour le Nobel. Il ne manquait que la remise de médaille. Il est retenu, mais sa confiance, beaucoup moins.'],
+    b:['Un échange avec la future équipe, questions concrètes','Il ressort avec l’envie de rejoindre le projet. Les entreprises aussi passent un entretien, et vous venez de le réussir.'] },
+];
+let B={i:0,score:0,timer:0,picked:false};
+function openBander(){
+  hidePreview(); closeModal && $('#modal').classList.contains('hidden')||closeModal();
+  const el=$('#bander'); el.classList.remove('hidden'); document.body.style.overflow='hidden';
+  ac(); B={i:0,score:0,timer:0,picked:false}; bedOn(); renderScene();
+}
+function bShell(inner){ return `<div class="scene" id="bscene"></div>
+  <div class="top"><span class="ttl">LE PARCOURS CANDIDAT · ÉPISODE INTERACTIF</span><span class="score" id="bscore"></span></div>
+  <button class="xbtn" id="bx" aria-label="Fermer">${ic.x}</button>${inner}` }
+function renderScene(){
+  const S=SCENES[B.i], el=$('#bander');
+  el.innerHTML=bShell(`<div class="story"><div class="act">${S.act}</div><div class="line">${S.line}</div><div class="ctx">${S.ctx}</div></div>
+    <div class="choices off" id="bch"><div class="timer"><i id="bt"></i></div><div class="opts"><button class="opt" data-c="a">${S.a[0]}</button><button class="opt" data-c="b">${S.b[0]}</button></div></div>`);
+  $('#bscene').innerHTML=`<svg viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice">${ART[S.fx]('bs'+B.i)}</svg>`;
+  $('#bscore').textContent=`Scène ${B.i+1}/${SCENES.length} · Envie de rejoindre : ${50+B.score*12} %`;
+  $('#bx').onclick=closeBander; B.picked=false;
+  setTimeout(()=>{ const ch=$('#bch'); if(!ch) return; ch.classList.remove('off'); play('glass',{vol:.3,dur:1.6,fadeOut:.8});
+    const bt=$('#bt'), D=12000, t0=performance.now();
+    const run=n=>{ if(B.picked||!document.body.contains(bt)) return; const k=1-(n-t0)/D; bt.style.width=Math.max(0,k*100)+'%'; if(k<=0){ choose('a',true); return } B.timer=requestAnimationFrame(run) };
+    B.timer=requestAnimationFrame(run);
+    $$('#bander .opt').forEach(o=>o.onclick=()=>choose(o.dataset.c,false));
+  }, 1700);
+}
+function choose(c, auto){
+  if(B.picked) return; B.picked=true; cancelAnimationFrame(B.timer);
+  const S=SCENES[B.i], good=c==='b'; if(good) B.score++;
+  const btn=document.querySelector(`#bander .opt[data-c="${c}"]`); if(btn) btn.classList.add('pick');
+  good ? play('whoosh',{vol:.45,dur:1.2}) : play('hit',{vol:.55,dur:1.4});
+  setTimeout(()=>{
+    $('#bch').classList.add('off'); $('.story .ctx').textContent='';
+    $('#bander').insertAdjacentHTML('beforeend',`<div class="result"><span class="tag" style="color:${good?'#46d369':'#f5a623'}">${auto?'TEMPS ÉCOULÉ · CHOIX PAR DÉFAUT : ':''}${good?'APPROCHE HUMAINE':'APPROCHE TERMINATOR'}</span>
+      <p>${good?S.b[1]:S.a[1]}</p><button class="btn w" id="bnext">${B.i<SCENES.length-1?'Scène suivante':'Voir la fin'} ›</button></div>`);
+    $('#bscore').textContent=`Scène ${B.i+1}/${SCENES.length} · Envie de rejoindre : ${50+B.score*12} %`;
+    $('#bnext').onclick=()=>{ B.i++; B.i<SCENES.length?renderScene():endBander() };
+  },700);
+}
+function endBander(){
+  const s=B.score; const E = s===4 ? ['FIN N° 1 SUR 3','Le Café','Fin canonique débloquée. Aucune boule de cristal, aucune porte-backlink, aucun jury du Nobel. Votre processus donne envie de rejoindre le projet. Il ne reste qu’à fixer la date du café.',0]
+    : s>=2 ? ['FIN N° 2 SUR 3','Le deuxième café','Fin hybride. Vous avez hésité à prédire l’ennui futur d’Alexis, mais la curiosité l’a emporté. On rattrape tout autour d’un café, il racontera le processus de deux mois.',1]
+    : ['FIN N° 3 SUR 3','Sans nouvelles de notre part','« Sans nouvelles de notre part d’ici trois semaines, veuillez considérer que… » Fin alternative, version écologique. Bonne nouvelle : dans cette série, on peut rejouer.',2];
+  const seen=store.get('endings',[]); if(!seen.includes(E[3])) seen.push(E[3]); store.set('endings',seen);
+  $('#bander').innerHTML=bShell(`<div class="end"><div class="lab">${E[0]}</div><h3>${E[1]}</h3><p>${E[2]}</p>
+    <div class="endings">${[0,1,2].map(i=>`<i class="${seen.includes(i)?'on':''}"></i>`).join('')}</div><small>${seen.length}/3 fins découvertes</small>
+    <div class="btns" style="justify-content:center;margin-top:22px"><a class="btn w" href="${CAFE}">${ic.mail.replace('stroke="#fff"','stroke="#000"')}Proposer un café</a><button class="btn g" id="bre">Rejouer</button><button class="btn g" id="bcat">Le catalogue</button></div></div>`);
+  $('#bscene').innerHTML=''; $('#bscore').textContent=''; $('#bx').onclick=closeBander;
+  bedOff(); s===4 ? play('fanfare',{vol:.42,dur:6,fadeOut:2}) : s>=2 ? play('boom',{vol:.8,dur:3}) : play('glitch',{vol:.4,offset:.4,dur:3.2,fadeOut:1});
+  $('#bre').onclick=()=>{ B={i:0,score:0,timer:0,picked:false}; renderScene() }; $('#bcat').onclick=closeBander;
+}
+function closeBander(){ cancelAnimationFrame(B.timer); B.picked=true; bedOff(); const el=$('#bander'); el.classList.add('hidden'); el.innerHTML=''; document.body.style.overflow='' }
+
+/* ---------- VUE ATS ---------- */
+function openATS(){
+  hidePreview(); const el=$('#ats'); el.classList.remove('hidden'); document.body.style.overflow='hidden';
+  const K=s=>`<mark>${s}</mark>`;
+  el.innerHTML=`<div class="wrap">
+    <div class="bar"><span>ATS_SCANNER v9.0 · alexis_druaux.pdf</span><span style="display:flex;gap:8px;flex-wrap:wrap"><a href="Alexis_Druaux_CV_Chef_de_projet.pdf" target="_blank" rel="noopener"><button>Ouvrir le PDF</button></a><button id="atsHuman">Désactiver Terminator</button></span></div>
+    <div class="scan" id="scan"></div>
+    <h1>ALEXIS DRUAUX</h1>
+    <p>${K('Chef de projet IT')} & ${K('transformation digitale')} · Relation client · Communication · ${K('IA')} et ${K('automatisation')}</p>
+    <p>Rouen (76), Normandie · Mont-Saint-Aignan · Paris · ${K('télétravail')} · 06 45 47 12 92 · ${MAIL} · linkedin.com/in/alexis-druaux</p>
+    <h2>PROFIL</h2>
+    <p>Chef de projet à profil hybride (IT, relation client, communication), avec 5 ans d'expérience en ${K('gestion de projet')} digital et en conseil client. Pratique des ${K('méthodes agiles')} (${K('Scrum')}, ${K('Kanban')}). A piloté 5 à 10 projets de bout en bout pour des TPE/PME (${K('cadrage')}, ${K('cahier des charges')}, ${K('planning')}, ${K('recette')}, ${K('déploiement')}) et conçu un site web avec une équipe de développeurs. Met l'IA et l'automatisation (${K('API OpenAI')}, ${K('Anthropic')}, ${K('n8n')}) au service des métiers : jusqu'à 10 h par semaine économisées. Disponible immédiatement.</p>
+    <h2>EXPÉRIENCE PROFESSIONNELLE</h2>
+    <p><b>Conseiller commercial et chargé de clientèle</b>, Heyme (assurance de personnes), CDD · août 2025 – juin 2026</p>
+    <ul><li>Conseil et suivi de 50 à 100 clients par jour (téléphone, e-mail, chat), portefeuille dans le ${K('CRM')}, réclamations.</li><li>Stands et conférences devant 600+ personnes (français, ${K('anglais')}), ateliers prévention santé (Normandie, Île-de-France).</li></ul>
+    <p><b>Consultant indépendant en gestion de projet et transformation digitale</b>, Rouen · mai 2023 – juin 2025</p>
+    <ul><li>Pilotage de bout en bout de 5 à 10 projets pour des TPE/PME : cadrage, cahier des charges, ${K('analyse comparative')}, planning, ${K('jalons')}, recette, déploiement.</li><li>Automatisation par l'IA (API OpenAI et Anthropic, n8n) : jusqu'à 10 h par semaine économisées. Infrastructure ${K('Linux')} auto-hébergée (${K('agent IA')}, ${K('RAG')}, bots).</li><li>Conception de 2 programmes de formation, prospection et closing.</li></ul>
+    <p><b>Chef de projet digital et chargé de communication</b>, Sentinel Center, bénévole · nov. 2021 – sept. 2025</p>
+    <ul><li>Conception du site web : cahier de fonctionnalités, ${K('étude de faisabilité')}, arborescence, coordination avec les développeurs (${K('Tailwind CSS')}, Three.js, ${K('Sanity')}, ${K('GitHub')}).</li><li>Communauté Discord de 500+ membres (rôles, anti-bots, bots no-code et low-code), rédaction, fact-checking, recrutement et formation des modérateurs.</li></ul>
+    <p><b>Représentant des étudiants</b>, UNiED, IED Paris 8, bénévole · 2025 – 2026</p>
+    <ul><li>Dossiers juridiques et stratégiques pour le conseil mensuel (20 demandes), guides de négociation, ${K('benchmark')}.</li></ul>
+    <p><b>Conseiller de vente</b>, Bouygues Telecom, CDD · mai – oct. 2023 : 25 clients par jour, 120 % des objectifs.</p>
+    <p><b>Chargé d'affaires B2B</b>, Staffmatch, CDD · janv. – mars 2023 : 43 entreprises prospectées en Normandie, 11 comptes signés.</p>
+    <p><b>Consultant en recrutement et chargé de clientèle</b>, Randstad, CDI · mai 2021 – juil. 2022 : référent régional du secteur public, 150+ clients, planning de 150 intérimaires, 120+ recrutements.</p>
+    <h2>FORMATION</h2>
+    <ul><li>1re année de Licence Psychologie, IED Paris 8 (à distance) · 2025 – 2026</li><li>Bachelor Marketing et Communication, École Internationale Tunon, Caen, mention Très Bien · 2019 – 2020</li><li>BTS Négociation et Relation Client, Lycée Jehan Ango, Dieppe, mention Très Bien · 2017 – 2019</li><li>DUT Techniques de commercialisation (1re année), Faculté Droit et Économie, Rouen · 2016 – 2017</li></ul>
+    <h2>COMPÉTENCES</h2>
+    <p>Gestion de projet : méthodes agiles (Scrum, Kanban), cadrage, cahier des charges, étude de faisabilité, planning et jalons, recette, déploiement, ${K('reporting')}.<br>IA et automatisation : API OpenAI, Anthropic, n8n, agents IA, RAG, ${K('MCP')}, bots, formation des équipes.<br>Relation client et vente : conseil, CRM, portefeuille, réclamations, ${K('prospection B2B')}, ${K('négociation')}.<br>Communication : rédaction, fact-checking, community management, réseaux sociaux, prise de parole, animation d'événements.<br>Outils : Suite Office, Google Workspace, Canva, GitHub, Linux, Tailwind CSS, Sanity, Discord, Slack.</p>
+    <h2>LANGUES</h2><p>Français : langue maternelle · Anglais : B2, usage professionnel · Espagnol : notions</p>
+    <div class="note">⚠ ANOMALIE n° 1 : « trou de 3 mois » détecté. Hypothèse du système : vacances. Hypothèse humaine : demander.<br>⚠ ANOMALIE n° 2 : champ « personnalité » non indexable. Disponible en entretien uniquement.<br>⚠ ANOMALIE n° 3 : « trop qualifié » ne figure dans aucun référentiel de compétences.<br>→ ACTION RECOMMANDÉE : <a href="${CAFE}" style="text-decoration:underline;font-weight:700">planifier un café</a>.</div>
+  </div>`;
+  $('#atsHuman').onclick=closeATS;
+  const lines=['> chargement de alexis_druaux.pdf ............ OK','> extraction des mots-clés .................. 31 trouvés','> autonome / polyvalent / résistant au stress  OK (malgré lui)','> correspondance « chef de projet » .......... 99,8 %','> humour ..................................... NON INDEXÉ','> verdict ................................... CANDIDAT À APPELER █'];
+  const sc=$('#scan'); let i=0; const step=()=>{ if(!document.body.contains(sc)) return; sc.textContent+= (i?'\n':'')+lines[i]; i++; if(i<lines.length) setTimeout(step,420) }; step();
+}
+function closeATS(){ const el=$('#ats'); el.classList.add('hidden'); el.innerHTML=''; document.body.style.overflow=''; if(PROFILE.id==='ats'){ toast('Terminator désactivé. Bienvenue côté humain.'); PROFILE={...PROFILES[0]}; renderRows() } }
+
+/* ---------- HEADER, NOTIFS, RECHERCHE ---------- */
+addEventListener('scroll',()=>{ $('#hdr').classList.toggle('solid',scrollY>40); hidePreview() },{passive:true});
+$('#home').onclick=e=>{ e.preventDefault(); clearSearch(); scrollTo({top:0,behavior:'smooth'}) };
+$$('header nav a').forEach(a=>a.onclick=e=>{ e.preventDefault(); clearSearch(); $$('header nav a').forEach(x=>x.classList.remove('on')); a.classList.add('on'); const t=document.getElementById(a.dataset.go); if(t) scrollTo({top:a.dataset.go==='top'?0:t.getBoundingClientRect().top+scrollY-80,behavior:'smooth'}) });
+const NOTIFS=[
+  ['soon','<b>Nouveauté</b> · Saison 5 : chef de projet chez vous. Casting ouvert.','Aujourd’hui'],
+  ['cadre','<b>Nouveau documentaire</b> · Le cadre d\u2019abord : quatre lignes avant de choisir un outil d\u2019IA.','16 oct.'],
+  ['funnel','<b>Nouvel épisode</b> de « Le Funnel » : 4 CV, 2 versions par envoi, 1 tableau de bord.','Hier'],
+  ['trou','<b>Rappel</b> · « Sans nouvelles de notre part d’ici trois semaines, veuillez considérer que… »','Il y a 3 semaines'],
+  ['cafe','<b>Épisode spécial</b> · Le processus de deux mois. Uniquement à l’oral, café compris.','Disponible'],
+];
+$('#bell').onclick=e=>{ e.stopPropagation(); $('#memenu').classList.add('hidden'); const n=$('#notifs'); n.classList.toggle('hidden'); $('#bell .dot')?.remove();
+  n.innerHTML=NOTIFS.map(([id,t,d])=>`<div class="n" data-id="${id}" style="cursor:pointer"><div class="th">${poster({...SHOWS[id],title:''})}</div><p>${t}<small>${d}</small></p></div>`).join('');
+  n.querySelectorAll('.n').forEach(x=>x.onclick=()=>{ n.classList.add('hidden'); openFrom(x.dataset.id) }) };
+$('#meBtn').onclick=e=>{ e.stopPropagation(); $('#notifs').classList.add('hidden'); const m=$('#memenu'); m.classList.toggle('hidden');
+  m.innerHTML=`<div class="menu">${PROFILES.filter(p=>p.id!==PROFILE.id).map(p=>`<button data-p="${p.id}"><span style="width:28px;height:28px;border-radius:3px;overflow:hidden;display:inline-block">${p.av}</span>${p.name}</button>`).join('')}
+    <hr style="border-color:#333;margin:6px 0"><a href="Alexis_Druaux_CV_Chef_de_projet.pdf" target="_blank" rel="noopener">📄 Ouvrir le CV PDF</a><a href="${CAFE}">☕ Centre d'aide (un café)</a><a href="https://www.linkedin.com/in/alexis-druaux" target="_blank" rel="noopener">in · LinkedIn</a>
+    <hr style="border-color:#333;margin:6px 0"><button id="logout" style="justify-content:center">Se déconnecter d'Alexisflix</button></div>`;
+  m.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{ m.classList.add('hidden'); pickProfile(b.dataset.p); renderRows() });
+  $('#logout').onclick=()=>{ m.classList.add('hidden'); toast('Déconnexion impossible : vous êtes trop qualifié·e pour partir maintenant.') } };
+document.addEventListener('click',e=>{ if(!e.target.closest('.drop')){ $('#notifs').classList.add('hidden'); $('#memenu').classList.add('hidden') } });
+
+const SEARCH_INDEX = Object.values(SHOWS).filter(s=>!['skill'].includes(s.id)).map(s=>({id:s.id, txt:(s.title+' '+s.syn+' '+s.genres.join(' ')+' '+(s.eps||[]).flat().join(' ')+' '+(s.id==='main'?SEASONS.map(x=>x.eps.flat().join(' ')+x.org).join(' '):'')).toLowerCase()}));
+SEASONS.forEach(S=>{ const id={1:'rh',2:'b2b',3:'archi',4:'allo'}[S.n]; const it=SEARCH_INDEX.find(x=>x.id===id); it.txt+=' '+S.eps.flat().join(' ').toLowerCase()+' '+S.org.toLowerCase() });
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+$('#search').onclick=()=>{ $('#search').classList.add('open'); $('#q').focus() };
+$('#q').addEventListener('blur',()=>{ if(!$('#q').value) $('#search').classList.remove('open') });
+$('#q').addEventListener('input',()=>{
+  const q=norm($('#q').value.trim()), R=$('#results'), B2=$('#browse');
+  if(!q){ clearSearch(); return }
+  B2.classList.add('hidden'); R.classList.remove('hidden'); hidePreview();
+  const hits=SEARCH_INDEX.filter(x=>norm(x.txt).includes(q)).map(x=>x.id);
+  let special='';
+  if(/vacance|bracelet|all inclu|punta|club/.test(q)) special='Aucun résultat pour cette recherche : le bracelet all inclusive n’a jamais existé. Essayez plutôt « Le Trou de trois mois ».';
+  else if(/ennui|qualifi|cristal/.test(q)) special='Recherche prédictive désactivée. Le seul moyen fiable de savoir s’il va s’ennuyer : lui poser la question.';
+  else if(/salaire|remun|pretention/.test(q)) special='Ce contenu n’est disponible qu’en version audio, autour d’un café.';
+  else if(/cafe|coffee/.test(q)) special='Excellent choix. <a href="'+CAFE+'" style="text-decoration:underline;color:#fff">Proposer un café à Alexis</a>.';
+  const showIds = hits.length?hits:(special?[]:[]);
+  R.innerHTML=`<h2>Résultats pour <b>« ${$('#q').value.replace(/[<>&]/g,'')} »</b></h2>
+    ${special?`<p class="empty" style="margin-bottom:24px">${special}</p>`:''}
+    ${showIds.length?`<div class="grid">${showIds.map(id=>card(id)).join('')}</div>`:(!special?`<div class="empty">Votre recherche ne correspond à aucun titre.<br><br>Suggestions :<br>· Essayez « gestion de projet », « n8n », « Scrum », « recrutement » ou « café »<br>· Ou passez à la vieille technologie : <a href="${CAFE}" style="text-decoration:underline;color:#fff">lui écrire</a></div>`:'')}`;
+  R.querySelectorAll('.card').forEach(c=>{ c.onclick=()=>openFrom(c.dataset.id); if(!isTouch){ c.onmouseenter=()=>schedulePreview(c); c.onmouseleave=()=>{clearTimeout(pvT); pvLeaveT=setTimeout(hidePreview,120)} } });
+});
+function clearSearch(){ $('#q').value=''; $('#search').classList.remove('open'); $('#results').classList.add('hidden'); $('#browse').classList.remove('hidden') }
+
+/* ---------- BOUTONS GÉNÉRIQUES ---------- */
+document.addEventListener('click',e=>{
+  const p=e.target.closest('[data-play]'); if(p){ e.preventDefault(); openPlayer(); return }
+  const o=e.target.closest('[data-open]'); if(o){ e.preventDefault(); openModal(o.dataset.open); return }
+  const a=e.target.closest('[data-ats]'); if(a){ e.preventDefault(); openATS(); return }
+  const b=e.target.closest('[data-bander]'); if(b){ e.preventDefault(); openBander(); return }
+});
+function syncHeroSound(){ $('#heroSound').innerHTML = muted ? '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9z" fill="#fff"/><path d="m17 9 4 6m0-6-4 6"/></svg>' : '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9z" fill="#fff"/><path d="M16 8a5 5 0 0 1 0 8"/></svg>' }
+$('#heroSound').onclick=()=>{ ac(); setMuted(!muted); toast(muted?'Son coupé. Comme un ATS.':'Son activé.') };
+$('#legal').onclick=e=>{ e.preventDefault(); toast('Parodie faite main par Alexis Druaux, sans lien avec une vraie plateforme de streaming. Aucune donnée collectée, à part votre envie de lui écrire.') };
+$('#relaunch').onclick=e=>{ e.preventDefault(); location.reload() };
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ if(!$('#contact').classList.contains('hidden')) closeContact(); else if(!$('#modal').classList.contains('hidden')) closeModal(); else if(!$('#bander').classList.contains('hidden')) closeBander(); else if(!$('#ats').classList.contains('hidden')) closeATS() } });
+
+/* ---------- « ÊTES-VOUS TOUJOURS LÀ ? » ---------- */
+let idleT, idleShown=false;
+let idleArmed=false;
+function armIdle(){ if(idleArmed) return; idleArmed=true; const reset=()=>{ clearTimeout(idleT); if(!idleShown) idleT=setTimeout(showStill,80000) }; ['mousemove','scroll','keydown','touchstart','click'].forEach(ev=>addEventListener(ev,reset,{passive:true})); reset() }
+function showStill(){
+  if(idleShown || !$('#player').classList.contains('hidden') || !$('#bander').classList.contains('hidden')) return; idleShown=true;
+  const s=$('#still'); s.classList.remove('hidden');
+  s.innerHTML=`<div class="in"><h3>Êtes-vous toujours en train de recruter&nbsp;?</h3><p>Vous regardez « Alexis Druaux » depuis un moment. C'est plutôt bon signe.</p>
+    <div class="b"><button class="p1" id="st1">Continuer à regarder</button><a href="${CAFE}" id="st2">Proposer un café</a><button id="st3" style="border-color:#555;color:#aaa">Retour aux profils</button></div></div>`;
+  $('#st1').onclick=()=>s.classList.add('hidden'); 
+  $('#st3').onclick=()=>{ s.classList.add('hidden'); $('#app').classList.add('hidden'); showProfiles() };
+}
+
+/* ---------- ÉPISODE SUIVANT (bas de page) ---------- */
+(function(){
+  const box=$('#nextep'); let shown=false, iv;
+  box.innerHTML=`<div class="th">${poster({...SHOWS.cafe,title:''})}<span style="position:absolute;left:12px;bottom:10px;z-index:4;font-family:'Playfair Display';font-weight:900;font-style:italic;font-size:22px;text-shadow:0 2px 8px #000">Le Café</span></div>
+    <div class="bd"><div class="lab">ÉPISODE SUIVANT</div><h4>Vous × Alexis</h4><p>Un café, des questions concrètes, et l'histoire du processus de deux mois. Durée : 30 min. Café compris.</p>
+    <div class="row2"><a href="${CAFE}"><svg class="ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="#ccc" stroke-width="4"/><circle id="ringc" cx="18" cy="18" r="15" fill="none" stroke="#000" stroke-width="4" stroke-dasharray="94.2" stroke-dashoffset="0" transform="rotate(-90 18 18)"/></svg><span id="ringt">Lancer l'épisode</span></a><button id="nxClose">Plus tard</button></div></div>`;
+  $('#nxClose').onclick=()=>{ box.classList.remove('show'); shown=true; clearInterval(iv) };
+  const io=new IntersectionObserver(es=>{ es.forEach(en=>{ if(en.isIntersecting && !shown){ shown=true; box.classList.add('show');
+    let k=10; iv=setInterval(()=>{ k--; const c=$('#ringc'); if(c) c.setAttribute('stroke-dashoffset',(94.2*(10-k)/10).toFixed(1)); if(k<=0){ clearInterval(iv); $('#ringt').textContent='On vous attend ☕' } },1000) } }) },{threshold:.3});
+  io.observe($('#credits'));
+})();
+
+
+/* ---------- FICHE CONTACT (le café) ---------- */
+const MSG = "Bonjour Alexis, j'ai regardé la série sur Alexisflix. On en parle autour d'un café ?";
+function openContact(){
+  hidePreview(); const c=$('#contact'); c.classList.remove('hidden');
+  c.innerHTML=`<div class="in"><div class="th">${poster({...SHOWS.cafe,title:''})}<button class="x" id="cx" aria-label="Fermer">${ic.x}</button>
+    <span style="position:absolute;left:20px;bottom:12px;z-index:4;font-family:'Playfair Display';font-weight:900;font-style:italic;font-size:26px;text-shadow:0 2px 8px #000">Le Café</span></div>
+    <div class="bd"><p>Épisode spécial : vous, Alexis, un café et des questions concrètes. Durée : 30 min. À Rouen, à Mont-Saint-Aignan, à Paris ou en visio.</p>
+    <div class="ln"><span><small>E-MAIL</small>${MAIL}</span><button data-copy="${MAIL}">Copier</button></div>
+    <div class="ln"><span><small>TÉLÉPHONE</small>06 45 47 12 92</span><button data-copy="06 45 47 12 92">Copier</button></div>
+    <div class="ln"><span><small>LINKEDIN</small>linkedin.com/in/alexis-druaux</span><a href="https://www.linkedin.com/in/alexis-druaux" target="_blank" rel="noopener">Ouvrir</a></div>
+    <div class="ln"><span><small>MESSAGE PRÊT À ENVOYER</small><span style="font-weight:400;color:#ccc">${MSG}</span></span><button data-copy="${MSG.replace(/"/g,'&quot;')}">Copier</button></div>
+    </div></div>`;
+  $('#cx').onclick=closeContact;
+  c.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{ const t=b.dataset.copy;
+    const ok=()=>{ b.textContent='Copié ✓'; toast('Copié. Plus qu’à coller.') };
+    try{ navigator.clipboard.writeText(t).then(ok).catch(()=>selectIn(b)) }catch(e){ selectIn(b) } });
+}
+function selectIn(b){ const sp=b.previousElementSibling; const r=document.createRange(); r.selectNodeContents(sp); const s=getSelection(); s.removeAllRanges(); s.addRange(r); toast('Texte sélectionné : copiez-le avec Ctrl/Cmd + C.') }
+function closeContact(){ const c=$('#contact'); c.classList.add('hidden'); c.innerHTML='' }
+$('#contact').addEventListener('click',e=>{ if(e.target.id==='contact') closeContact() });
+document.addEventListener('click',e=>{ const a=e.target.closest('a[href="#cafe"]'); if(a){ e.preventDefault(); e.stopPropagation(); $('#still').classList.add('hidden'); openContact() } },true);
+
+/* ---------- INIT ---------- */
+heroArt(); mobPoster(); renderRows(); syncHeroSound();
+if(location.hash==='#ats'){ $('#intro')?.remove(); $('#app').classList.remove('hidden'); PROFILE=PROFILES[2]; openATS() }
+if(location.hash==='#og'){ $('#intro')?.remove(); $('#app').classList.remove('hidden'); $('#nextep').remove() }
+if(location.hash==='#direct'){ $('#intro')?.remove(); pickProfile('guest') }
+</script>
+</body>
+</html>
